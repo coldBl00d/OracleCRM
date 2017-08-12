@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled1.jsf" id="d1" binding="#{backingBeanScope.backing_untitled1.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_untitled1.f1}">
+            <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_untitled1.pgl1}">
+                <af:gridRow height="50px" id="gr2" binding="#{backingBeanScope.backing_untitled1.gr2}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc3"
+                                 binding="#{backingBeanScope.backing_untitled1.gc3}">
+                        <af:panelHeader text="Error Page" id="ph1"
+                                        binding="#{backingBeanScope.backing_untitled1.ph1}" type="stretch"
+                                        messageType="error">
+                            <f:facet name="context"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="menuBar"/>
+                            <f:facet name="legend"/>
+                            <f:facet name="info"/>
+                        </af:panelHeader>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr3" binding="#{backingBeanScope.backing_untitled1.gr3}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1"
+                                 binding="#{backingBeanScope.backing_untitled1.gc1}">
+                        <!-- Content -->
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="50px" id="gr1" binding="#{backingBeanScope.backing_untitled1.gr1}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2"
+                                 binding="#{backingBeanScope.backing_untitled1.gc2}">
+                        <!-- Footer -->
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_untitled1-->
+</f:view>

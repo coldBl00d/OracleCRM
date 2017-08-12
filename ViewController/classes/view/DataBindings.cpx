@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.24" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <pageMap>
+    <page path="/Landing_Page.jsf" usageId="view_untitled2PageDef"/>
+    <page path="/Login.jsf" usageId="view_LoginPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_untitled2PageDef" path="view.pageDefs.untitled2PageDef"/>
+    <page id="view_LoginPageDef" path="view.pageDefs.LoginPageDef"/>
+  </pageDefinitionUsages>
+</Application>

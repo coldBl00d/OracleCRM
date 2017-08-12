@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled2.jsf" id="d1" binding="#{backingBeanScope.backing_untitled2.d1}">
+        <af:panelHeader text="Protected page" id="ph2" binding="#{backingBeanScope.backing_untitled2.ph2}"
+                        messageType="warning">
+            <f:facet name="context"/>
+            <f:facet name="toolbar"/>
+            <f:facet name="menuBar"/>
+            <f:facet name="legend"/>
+            <f:facet name="info"/>
+        </af:panelHeader>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_untitled2-->
+</f:view>

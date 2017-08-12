@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Login.jsf" id="d1" binding="#{backingBeanScope.backing_Login.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_Login.f1}">
+            <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_Login.pgl1}">
+                <af:gridRow height="50px" id="gr1" binding="#{backingBeanScope.backing_Login.gr1}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1"
+                                 binding="#{backingBeanScope.backing_Login.gc1}">
+                        <!-- Header -->
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr2" binding="#{backingBeanScope.backing_Login.gr2}">
+                    <af:gridCell width="100%" halign="center" valign="middle" id="gc2"
+                                 binding="#{backingBeanScope.backing_Login.gc2}">
+                        <!-- Content -->
+                        <af:inputText label="Username" id="it1" binding="#{backingBeanScope.backing_Login.it1}"
+                                      showRequired="true" value="#{LoginBean.username}"/>
+                        <af:spacer width="10" height="10" id="s1" binding="#{backingBeanScope.backing_Login.s1}"/>
+                        <af:inputText label="Password" id="it2" binding="#{backingBeanScope.backing_Login.it2}"
+                                      secret="true" showRequired="true"
+                                      value="#{LoginBean.password}"/>
+                        <af:spacer width="10" height="10" id="s2" binding="#{backingBeanScope.backing_Login.s2}"/>
+                        <af:separator id="s3" binding="#{backingBeanScope.backing_Login.s3}"/>
+                        <af:button text="Login" id="b1" binding="#{backingBeanScope.backing_Login.b1}"
+                                   action="#{LoginBean.doLogin}"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="50px" id="gr3" binding="#{backingBeanScope.backing_Login.gr3}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc3"
+                                 binding="#{backingBeanScope.backing_Login.gc3}">
+                        <!-- Footer -->
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Login-->
+</f:view>

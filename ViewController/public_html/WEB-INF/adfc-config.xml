@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
-  <view id="Home">
-    <page>/Home.jsf</page>
-  </view>
   <view id="Users">
     <page>/Users.jsf</page>
   </view>

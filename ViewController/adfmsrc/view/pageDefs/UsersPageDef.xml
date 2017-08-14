@@ -6,6 +6,7 @@
     <variableIterator id="variables"/>
     <taskFlow id="userwelcometaskflow1" taskFlowId="/WEB-INF/user-welcome-taskflow.xml#user-welcome-taskflow"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <page id="pt1" path="oracle.ui.pattern.dynamicShell.model.dynamicTabShellDefinition"/> 
   </executables>
   <bindings/>
 </pageDefinition>

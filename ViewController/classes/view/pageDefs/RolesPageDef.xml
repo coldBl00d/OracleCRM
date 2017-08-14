@@ -6,6 +6,7 @@
     <variableIterator id="variables"/>
     <taskFlow id="rolewelcome1" taskFlowId="/WEB-INF/flows/role-welcome.xml#role-welcome" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <page id="pt1" path="oracle.ui.pattern.dynamicShell.model.dynamicTabShellDefinition"/> 
   </executables>
   <bindings/>
 </pageDefinition>

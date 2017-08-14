@@ -3,31 +3,16 @@
    <OverallProperties
       id="OverallProperties1">
       <property
-         name="x">136.48242</property>
+         name="x">88.01758</property>
       <property
          name="y">83.5</property>
    </OverallProperties>
-   <View
-      id="View2">
-      <property
-         name="activityId">Home</property>
-      <property
-         name="x">70.5</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>Home&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">251.20117</property>
-      <property
-         name="page">/Home.jsf</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
    <View
       id="View3">
       <property
          name="activityId">Users</property>
       <property
-         name="x">508.5</property>
+         name="x">95.03516</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Users&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -42,7 +27,7 @@
       <property
          name="activityId">Products</property>
       <property
-         name="x">362.5</property>
+         name="x">387.03516</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Products&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -57,7 +42,7 @@
       <property
          name="activityId">Roles</property>
       <property
-         name="x">216.5</property>
+         name="x">241.03516</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Roles&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -72,7 +57,7 @@
       <property
          name="activityId">*</property>
       <property
-         name="x">289.5</property>
+         name="x">241.03516</property>
       <property
          name="y">84.0</property>
    </WildcardControlFlowRule>
@@ -94,7 +79,7 @@
       <property
          name="fromOutcome">goUsers</property>
       <property
-         name="sdm:polyPoints">R50,325.5,84.149414,508.5,196.85059,T50</property>
+         name="sdm:polyPoints">L50,205.03516,84.149414,95.03516,196.85059,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -104,7 +89,7 @@
       <property
          name="fromOutcome">goProducts</property>
       <property
-         name="sdm:polyPoints">B57,293.0,126.649414,362.5,196.85059,T50</property>
+         name="sdm:polyPoints">R50,277.03516,84.149414,387.03516,196.85059,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -114,6 +99,6 @@
       <property
          name="fromOutcome">goRoles</property>
       <property
-         name="sdm:polyPoints">B43,286.0,126.649414,216.5,196.85059,T50</property>
+         name="sdm:polyPoints">B50,T50</property>
    </ControlFlowCase>
 </SDM>

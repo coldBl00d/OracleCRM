@@ -34,13 +34,16 @@
                     <af:navigationPane hint="tabs" id="np1" binding="#{backingBeanScope.backing_Users.np1}">
                         <af:commandNavigationItem id="ni1" text="Users"
                                                   icon="#{resource['images:ic_account_circle_black_24dp_1x.png']}"
-                                                  selected="true" binding="#{backingBeanScope.backing_Users.ni1}"/>
+                                                  selected="true" binding="#{backingBeanScope.backing_Users.ni1}"
+                                                  action="goUsers" partialTriggers="::np1" partialSubmit="true"/>
                         <af:commandNavigationItem id="ni2" text="Products"
                                                   icon="#{resource['images:ic_shopping_cart_black_24dp_1x.png']}"
-                                                  binding="#{backingBeanScope.backing_Users.ni2}" action="goProducts"/>
+                                                  binding="#{backingBeanScope.backing_Users.ni2}" action="goProducts"
+                                                  partialSubmit="true" partialTriggers="::np1"/>
                         <af:commandNavigationItem id="ni3" text="Roles"
                                                   icon="#{resource['images:ic_account_balance_black_24dp_1x.png']}"
-                                                  binding="#{backingBeanScope.backing_Users.ni3}" action="goRoles"/>
+                                                  binding="#{backingBeanScope.backing_Users.ni3}" action="goRoles"
+                                                  partialSubmit="true" partialTriggers="::np1"/>
                     </af:navigationPane>
                 </f:facet>
                 <f:facet name="welcome">

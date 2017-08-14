@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AddressEO"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="ADDRESS"
+  AliasName="AddressEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="AddressId"
+    Precision="18"
+    Scale="0"
+    ColumnName="ADDRESS_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.DBSequence"
+    ColumnType="NUMBER"
+    TableName="ADDRESS"
+    PrimaryKey="true"
+    IsUpdateable="while_insert"
+    DefaultValue="@0"
+    Domain="oracle.jbo.domain.DBSequence"
+    RetrievedOnInsert="true"/>
+  <Attribute
+    Name="BuildingInfo"
+    IsNotNull="true"
+    Precision="1000"
+    ColumnName="BUILDING_INFO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADDRESS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="StreetName"
+    Precision="20"
+    ColumnName="STREET_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="ADDRESS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Zipcode"
+    IsNotNull="true"
+    Precision="18"
+    Scale="0"
+    ColumnName="ZIPCODE"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="ADDRESS"/>
+  <AccessorAttribute
+    Name="Location"
+    Association="model.AddressFk1ASSOC"
+    AssociationEnd="model.AddressFk1ASSOC.Location"
+    AssociationOtherEnd="model.AddressFk1ASSOC.Address"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Users"
+    Association="model.UsersFk1ASSOC"
+    AssociationEnd="model.UsersFk1ASSOC.Users"
+    AssociationOtherEnd="model.UsersFk1ASSOC.Address"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="AddressPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="ADDRESS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.AddressEO.AddressId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="AddressFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="LOCATION_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ADDRESS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EO.AddressEO.Zipcode"/>
+    </AttrArray>
+  </Key>
+</Entity>

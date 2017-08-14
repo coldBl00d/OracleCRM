@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserSalesteamFkVL"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  EntityAssociation="model.UserSalesteamFkASSOC">
+  <ViewLinkDefEnd
+    Name="SalesTeamsU1_1"
+    Cardinality="1"
+    Source="true"
+    Owner="model.SalesTeamsUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="SalesTeamsU1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.SalesTeamsUVO.TeamId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="UsersU"
+    Cardinality="-1"
+    Owner="model.UsersUVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="UsersU"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.UsersUVO.SalesTeamId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

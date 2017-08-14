@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="Home">
+    <page>/Home.jsf</page>
+  </view>
+  <view id="Users">
+    <page>/Users.jsf</page>
+  </view>
+  <view id="Products"></view>
+  <view id="Roles"></view>
+  <control-flow-rule id="__5">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__6">
+      <from-outcome>goHome</from-outcome>
+      <to-activity-id>Home</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__7">
+      <from-outcome>goUsers</from-outcome>
+      <to-activity-id>Users</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__8">
+      <from-outcome>goProducts</from-outcome>
+      <to-activity-id>Products</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__9">
+      <from-outcome>goRoles</from-outcome>
+      <to-activity-id>Roles</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
   <managed-bean id="__1">
     <managed-bean-name>backing_Login</managed-bean-name>
     <managed-bean-class>view.backing.Login</managed-bean-class>
@@ -22,5 +49,17 @@
     <managed-bean-name>LoginBean</managed-bean-name>
     <managed-bean-class>managedbeans.LoginBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__10">
+    <managed-bean-name>backing_Home</managed-bean-name>
+    <managed-bean-class>view.backing.Home</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Home.jsf-->
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>backing_Users</managed-bean-name>
+    <managed-bean-class>view.backing.Users</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Users.jsf-->
   </managed-bean>
 </adfc-config>

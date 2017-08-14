@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UserRoleLinkFk2ASSOC"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="RolesTable"
+    Cardinality="1"
+    Source="true"
+    Owner="model.eo.RolesTableEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="RolesTable"/>
+      <Attr Name="_foreignKey" Value="model.eo.RolesTableEO.RolesPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.RolesTableEO.Id"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="UserRoleLink"
+    Cardinality="-1"
+    Owner="model.eo.UserRoleLinkEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="UserRoleLink"/>
+      <Attr Name="_foreignKey" Value="model.eo.UserRoleLinkEO.UserRoleLinkFk2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.UserRoleLinkEO.RoleId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

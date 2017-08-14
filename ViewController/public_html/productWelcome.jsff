@@ -4,7 +4,7 @@
         <af:gridRow height="100%" id="gr1">
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
                 <!-- Content -->
-                <af:button text="Product welcome" id="b1" binding="#{backingBeanScope.backing_productWelcome.b1}"/>
+                <af:outputText value="product welcome" id="ot1" binding="#{backingBeanScope.backing_productWelcome.ot1}"/>
             </af:gridCell>
         </af:gridRow>
     </af:panelGridLayout>

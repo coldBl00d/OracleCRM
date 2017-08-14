@@ -7,7 +7,25 @@
                              binding="#{backingBeanScope.backing_Users.pt1}">
                 <f:facet name="copyright"/>
                 <f:facet name="about"/>
-                <f:facet name="navigation"/>
+                <f:facet name="navigation">
+                    <af:decorativeBox id="db1" binding="#{backingBeanScope.backing_Users.db1}">
+                        <f:facet name="top"/>
+                        <f:facet name="center">
+                            <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_Users.pgl1}"
+                                                 layout="vertical">
+                                <af:outputText value="Choose an action" id="ot1"
+                                               binding="#{backingBeanScope.backing_Users.ot1}"
+                                               inlineStyle="font-size:large; font-weight:bold;"/>
+                                <af:panelList id="pl1" binding="#{backingBeanScope.backing_Users.pl1}">
+                                    <af:link text="Create New User" id="l1" binding="#{backingBeanScope.backing_Users.l1}"
+                                             actionListener="#{backingBeanScope.Launcher.createUserActivity}"/>
+                                    <af:link text="View Users" id="l2" binding="#{backingBeanScope.backing_Users.l2}"
+                                             actionListener="#{backingBeanScope.Launcher.ViewUserActivity}"/>
+                                </af:panelList>
+                            </af:panelGroupLayout>
+                        </f:facet>
+                    </af:decorativeBox>
+                </f:facet>
                 <f:facet name="globalLinks"/>
                 <f:facet name="status"/>
                 <f:facet name="globalToolbar"/>

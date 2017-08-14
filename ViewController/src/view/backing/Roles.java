@@ -3,11 +3,13 @@ package view.backing;
 import oracle.adf.view.rich.component.rich.RichDocument;
 import oracle.adf.view.rich.component.rich.RichForm;
 import oracle.adf.view.rich.component.rich.fragment.RichPageTemplate;
+import oracle.adf.view.rich.component.rich.fragment.RichRegion;
 
 public class Roles {
     private RichPageTemplate pt1;
     private RichForm f1;
     private RichDocument d1;
+    private RichRegion r1;
 
     public void setPt1(RichPageTemplate pt1) {
         this.pt1 = pt1;
@@ -31,5 +33,13 @@ public class Roles {
 
     public RichDocument getD1() {
         return d1;
+    }
+
+    public void setR1(RichRegion r1) {
+        this.r1 = r1;
+    }
+
+    public RichRegion getR1() {
+        return r1;
     }
 }

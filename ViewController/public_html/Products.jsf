@@ -27,7 +27,10 @@
                                                   binding="#{backingBeanScope.backing_Users.ni3}" action="goRoles"/>
                     </af:navigationPane>
                 </f:facet>
-                <f:facet name="welcome"/>
+                <f:facet name="welcome">
+                    <af:region value="#{bindings.productwelcome1.regionModel}" id="r1"
+                               binding="#{backingBeanScope.backing_Products.r1}"/>
+                </f:facet>
                 <f:facet name="innerToolbar"/>
             </af:pageTemplate>
         </af:form>

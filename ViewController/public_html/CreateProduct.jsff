@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelSplitter orientation="horizontal" splitterPosition="100" positionedFromEnd="true" id="ps1">
+        <f:facet name="first">
+            <af:button text="Create product" id="b1" binding="#{backingBeanScope.backing_CreateProduct.b1}"/>
+        </f:facet>
+        <f:facet name="second"/>
+    </af:panelSplitter>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_CreateProduct-->
+</ui:composition>

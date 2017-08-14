@@ -28,7 +28,7 @@ public class LoginBean {
     
     private String username; 
     private String password;
-    private String LANDING_PAGE = "/Landing_Page.jsf";
+    private String LANDING_PAGE = "/Users.jsf";
 
     public void setUsername(String username) {
         this.username = username;

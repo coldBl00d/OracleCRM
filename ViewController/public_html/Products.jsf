@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Products.jsf" id="d1" binding="#{backingBeanScope.backing_Products.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_Products.f1}">
+            <af:pageTemplate viewId="/oracle/ui/pattern/dynamicShell/dynamicTabShell.jspx" id="pt1"
+                             binding="#{backingBeanScope.backing_Products.pt1}">
+                <f:facet name="copyright"/>
+                <f:facet name="about"/>
+                <f:facet name="navigation"/>
+                <f:facet name="globalLinks"/>
+                <f:facet name="status"/>
+                <f:facet name="globalToolbar"/>
+                <f:facet name="globalSearch"/>
+                <f:facet name="globalTabs">
+                    <af:navigationPane hint="tabs" id="np1" binding="#{backingBeanScope.backing_Users.np1}">
+                        <af:commandNavigationItem id="ni1" text="Users"
+                                                  icon="#{resource['images:ic_account_circle_black_24dp_1x.png']}"
+                                                  selected="false" binding="#{backingBeanScope.backing_Users.ni1}"
+                                                  action="goUsers"/>
+                        <af:commandNavigationItem id="ni2" text="Products"
+                                                  icon="#{resource['images:ic_shopping_cart_black_24dp_1x.png']}"
+                                                  binding="#{backingBeanScope.backing_Users.ni2}"
+                                                  selected="true"/>
+                        <af:commandNavigationItem id="ni3" text="Roles"
+                                                  icon="file:/C:/JDeveloper/mywork/OracleCRM/Icons/ic_account_balance_black_24dp/web/ic_account_balance_black_24dp_1x.png"
+                                                  binding="#{backingBeanScope.backing_Users.ni3}" action="goRoles"/>
+                    </af:navigationPane>
+                </f:facet>
+                <f:facet name="welcome"/>
+                <f:facet name="innerToolbar"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Products-->
+</f:view>

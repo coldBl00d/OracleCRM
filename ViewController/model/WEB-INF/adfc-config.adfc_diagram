@@ -48,6 +48,8 @@
       <property
          name="y">251.20117</property>
       <property
+         name="page">/Products.jsf</property>
+      <property
          name="exceptionHandler">false</property>
    </View>
    <View
@@ -60,6 +62,8 @@
          name="description">&lt;html>&lt;p>&lt;b>Roles&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="y">251.20117</property>
+      <property
+         name="page">/Roles.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>

@@ -12,8 +12,23 @@
                 <f:facet name="status"/>
                 <f:facet name="globalToolbar"/>
                 <f:facet name="globalSearch"/>
-                <f:facet name="globalTabs"/>
-                <f:facet name="welcome"/>
+                <f:facet name="globalTabs">
+                    <af:navigationPane hint="tabs" id="np1" binding="#{backingBeanScope.backing_Users.np1}">
+                        <af:commandNavigationItem id="ni1" text="Users"
+                                                  icon="#{resource['images:ic_account_circle_black_24dp_1x.png']}"
+                                                  selected="true" binding="#{backingBeanScope.backing_Users.ni1}"/>
+                        <af:commandNavigationItem id="ni2" text="Products"
+                                                  icon="#{resource['images:ic_shopping_cart_black_24dp_1x.png']}"
+                                                  binding="#{backingBeanScope.backing_Users.ni2}" action="goProducts"/>
+                        <af:commandNavigationItem id="ni3" text="Roles"
+                                                  icon="#{resource['images:ic_account_balance_black_24dp_1x.png']}"
+                                                  binding="#{backingBeanScope.backing_Users.ni3}" action="goRoles"/>
+                    </af:navigationPane>
+                </f:facet>
+                <f:facet name="welcome">
+                    <af:region value="#{bindings.userwelcometaskflow1.regionModel}" id="r1"
+                               binding="#{backingBeanScope.backing_Users.r1}"/>
+                </f:facet>
                 <f:facet name="innerToolbar"/>
             </af:pageTemplate>
         </af:form>

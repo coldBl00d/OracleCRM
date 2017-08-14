@@ -6,8 +6,12 @@
   <view id="Users">
     <page>/Users.jsf</page>
   </view>
-  <view id="Products"></view>
-  <view id="Roles"></view>
+  <view id="Products">
+    <page>/Products.jsf</page>
+  </view>
+  <view id="Roles">
+    <page>/Roles.jsf</page>
+  </view>
   <control-flow-rule id="__5">
     <from-activity-id>*</from-activity-id>
     <control-flow-case id="__6">
@@ -61,5 +65,17 @@
     <managed-bean-class>view.backing.Users</managed-bean-class>
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1Users.jsf-->
+  </managed-bean>
+  <managed-bean id="__12">
+    <managed-bean-name>backing_Roles</managed-bean-name>
+    <managed-bean-class>view.backing.Roles</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Roles.jsf-->
+  </managed-bean>
+  <managed-bean id="__13">
+    <managed-bean-name>backing_Products</managed-bean-name>
+    <managed-bean-class>view.backing.Products</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Products.jsf-->
   </managed-bean>
 </adfc-config>

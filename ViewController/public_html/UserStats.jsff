@@ -1,9 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
     <af:panelGridLayout id="pgl1">
         <af:gridRow height="100%" id="gr1">
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
                 <!-- Content -->
+                <af:panelLabelAndMessage label="User Counts: " id="plam1"
+                                         binding="#{backingBeanScope.backing_UserStats.plam1}">
+                    <af:outputText value="#{bindings.Selectobjects0.inputValue}"
+                                   shortDesc="#{bindings.Selectobjects0.hints.tooltip}" id="ot1"
+                                   binding="#{backingBeanScope.backing_UserStats.ot1}">
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects0.format}"/>
+                    </af:outputText>
+                </af:panelLabelAndMessage>
             </af:gridCell>
         </af:gridRow>
     </af:panelGridLayout>

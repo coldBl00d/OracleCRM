@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.24" id="DataBindings"
              SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
   <pageMap>
     <page path="/Landing_Page.jsf" usageId="view_untitled2PageDef"/>
     <page path="/Login.jsf" usageId="view_LoginPageDef"/>
+    <page path="/UserStats.jsff" usageId="view_UserStatsPageDef"/>
+    <page path="/Users.jsf" usageId="view_UsersPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled2PageDef" path="view.pageDefs.untitled2PageDef"/>
     <page id="view_LoginPageDef" path="view.pageDefs.LoginPageDef"/>
+    <page id="view_UserStatsPageDef" path="view.pageDefs.UserStatsPageDef"/>
+    <page id="view_UsersPageDef" path="view.pageDefs.UsersPageDef"/>
   </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AdminAppModuleDataControl" Package="model.AM"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AdminAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
 </Application>

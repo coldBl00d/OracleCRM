@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="ViewCategoryPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CategoryTableU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CategoryTableU1Iterator"/>
+    <searchRegion Binds="CategoryTableU1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CategoryTableU1Query"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CategoryTableU1Iterator" id="CategoryName">
+      <AttrNames>
+        <Item Value="CategoryName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CategoryTableU1Iterator" id="CategoryDescription">
+      <AttrNames>
+        <Item Value="CategoryDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="CategoryTableU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction"
+            DataControl="AppModuleAMDataControl"/>
+    <action IterBinding="CategoryTableU1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <tree IterBinding="CategoryTableU1Iterator" id="CategoryTableU1">
+      <nodeDefinition DefName="model.UVO.CategoryTableUVO" Name="CategoryTableU10">
+        <AttrNames>
+          <Item Value="CategoryName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

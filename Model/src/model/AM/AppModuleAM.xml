@@ -22,6 +22,12 @@
   <ViewUsage
     Name="UsersU1"
     ViewObjectName="model.UVO.UsersUVO"/>
+  <ViewUsage
+    Name="CategoryTableU1"
+    ViewObjectName="model.UVO.CategoryTableUVO"/>
+  <ViewUsage
+    Name="ProductsU1"
+    ViewObjectName="model.UVO.ProductsUVO"/>
   <ViewLinkUsage
     Name="AddressFk1VL1"
     ViewLinkObjectName="model.UVO.AddressFk1VL"

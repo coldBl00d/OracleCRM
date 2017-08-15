@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="create-product-category-taskflow">
-    <default-activity>CreateCategory</default-activity>
+    <default-activity>CreateInsert</default-activity>
     <data-control-scope>
       <shared/>
     </data-control-scope>
@@ -14,6 +14,18 @@
     <view id="CreateCategory">
       <page>/CreateCategory.jsff</page>
     </view>
+    <method-call id="CreateInsert">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>CreateInsert</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__2">
+      <from-activity-id>CreateInsert</from-activity-id>
+      <control-flow-case id="__3">
+        <to-activity-id>CreateCategory</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

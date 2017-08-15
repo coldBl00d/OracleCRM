@@ -1,12 +1,96 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:panelGridLayout id="pgl1">
-        <af:gridRow height="100%" id="gr1">
-            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
-                <!-- Content -->
-                <af:button text="view category" id="b1" binding="#{backingBeanScope.backing_ViewCategory.b1}"/>
-            </af:gridCell>
-        </af:gridRow>
-    </af:panelGridLayout>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_ViewCategory-->
+    <af:decorativeBox id="db1" binding="#{backingBeanScope.backing_ViewCategory.db1}">
+        <f:facet name="center">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="90%" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Content -->
+                        <af:panelSplitter id="ps1" binding="#{backingBeanScope.backing_ViewCategory.ps1}"
+                                          splitterPosition="738">
+                            <f:facet name="first">
+                                <af:table value="#{bindings.CategoryTableU1.collectionModel}" var="row"
+                                          rows="#{bindings.CategoryTableU1.rangeSize}"
+                                          emptyText="#{bindings.CategoryTableU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                          rowBandingInterval="0"
+                                          selectedRowKeys="#{bindings.CategoryTableU1.collectionModel.selectedRow}"
+                                          selectionListener="#{bindings.CategoryTableU1.collectionModel.makeCurrent}"
+                                          rowSelection="single" fetchSize="#{bindings.CategoryTableU1.rangeSize}"
+                                          filterModel="#{bindings.CategoryTableU1Query.queryDescriptor}"
+                                          filterVisible="true"
+                                          queryListener="#{bindings.CategoryTableU1Query.processQuery}" varStatus="vs"
+                                          id="t1" partialTriggers="::b1 ::b2"
+                                          binding="#{backingBeanScope.backing_ViewCategory.t1}" columnStretching="last">
+                                    <af:column sortProperty="#{bindings.CategoryTableU1.hints.CategoryName.name}"
+                                               filterable="true" sortable="true"
+                                               headerText="#{bindings.CategoryTableU1.hints.CategoryName.label}"
+                                               id="c1">
+                                        <af:outputText value="#{row.CategoryName}"
+                                                       shortDesc="#{bindings.CategoryTableU1.hints.CategoryName.tooltip}"
+                                                       id="ot1"/>
+                                    </af:column>
+                                </af:table>
+                            </f:facet>
+                            <f:facet name="second">
+                                <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_ViewCategory.pfl1}">
+                                    <af:inputText value="#{bindings.CategoryName.inputValue}"
+                                                  label="#{bindings.CategoryName.hints.label}"
+                                                  required="#{bindings.CategoryName.hints.mandatory}"
+                                                  columns="#{bindings.CategoryName.hints.displayWidth}"
+                                                  maximumLength="#{bindings.CategoryName.hints.precision}"
+                                                  shortDesc="#{bindings.CategoryName.hints.tooltip}" id="it1"
+                                                  binding="#{backingBeanScope.backing_ViewCategory.it1}">
+                                        <f:validator binding="#{bindings.CategoryName.validator}"/>
+                                    </af:inputText>
+                                    <af:inputText value="#{bindings.CategoryDescription.inputValue}"
+                                                  label="#{bindings.CategoryDescription.hints.label}"
+                                                  required="#{bindings.CategoryDescription.hints.mandatory}"
+                                                  columns="#{bindings.CategoryDescription.hints.displayWidth}"
+                                                  maximumLength="#{bindings.CategoryDescription.hints.precision}"
+                                                  shortDesc="#{bindings.CategoryDescription.hints.tooltip}" id="it2"
+                                                  binding="#{backingBeanScope.backing_ViewCategory.it2}">
+                                        <f:validator binding="#{bindings.CategoryDescription.validator}"/>
+                                    </af:inputText>
+                                    <f:facet name="footer">
+                                        <af:panelGridLayout id="pgl2"
+                                                            binding="#{backingBeanScope.backing_ViewCategory.pgl2}">
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3"
+                                                        binding="#{backingBeanScope.backing_ViewCategory.gr3}">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3"
+                                                             binding="#{backingBeanScope.backing_ViewCategory.gc3}">
+                                                    <af:button text="Submit" id="b1"
+                                                               binding="#{backingBeanScope.backing_ViewCategory.b1}"
+                                                               actionListener="#{bindings.Execute.execute}"
+                                                               disabled="#{!bindings.Execute.enabled}"/>
+                                                    <af:spacer width="10" height="10" id="s1"
+                                                               binding="#{backingBeanScope.backing_ViewCategory.s1}"/>
+                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b2"
+                                                               binding="#{backingBeanScope.backing_ViewCategory.b2}"/>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </f:facet>
+                                </af:panelFormLayout>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr2" binding="#{backingBeanScope.backing_ViewCategory.gr2}" height="10%">
+                    <af:gridCell id="gc2" binding="#{backingBeanScope.backing_ViewCategory.gc2}">
+                        <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                   disabled="#{!bindings.Commit.enabled}" id="b3"
+                                   binding="#{backingBeanScope.backing_ViewCategory.b3}"/>
+                        <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
+                                   disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b4"
+                                   binding="#{backingBeanScope.backing_ViewCategory.b4}">
+                            <af:resetActionListener/>
+                        </af:button>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
+    </af:decorativeBox>
 </ui:composition>

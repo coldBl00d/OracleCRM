@@ -3,9 +3,48 @@
                 xmlns:f="http://java.sun.com/jsf/core">
     <af:panelSplitter orientation="horizontal" splitterPosition="100" positionedFromEnd="true" id="ps1">
         <f:facet name="first">
-            <af:button text="Create product" id="b1" binding="#{backingBeanScope.backing_CreateProduct.b1}"/>
+            <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_CreateProduct.pfl1}">
+                <af:inputText value="#{bindings.ProductName.inputValue}" label="#{bindings.ProductName.hints.label}"
+                              required="#{bindings.ProductName.hints.mandatory}"
+                              columns="#{bindings.ProductName.hints.displayWidth}"
+                              maximumLength="#{bindings.ProductName.hints.precision}"
+                              shortDesc="#{bindings.ProductName.hints.tooltip}" id="it1"
+                              binding="#{backingBeanScope.backing_CreateProduct.it1}">
+                    <f:validator binding="#{bindings.ProductName.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.ProductDescription.inputValue}"
+                              label="#{bindings.ProductDescription.hints.label}"
+                              required="#{bindings.ProductDescription.hints.mandatory}"
+                              columns="#{bindings.ProductDescription.hints.displayWidth}"
+                              maximumLength="#{bindings.ProductDescription.hints.precision}"
+                              shortDesc="#{bindings.ProductDescription.hints.tooltip}" id="it2"
+                              binding="#{backingBeanScope.backing_CreateProduct.it2}">
+                    <f:validator binding="#{bindings.ProductDescription.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.ProductPrice.inputValue}" label="#{bindings.ProductPrice.hints.label}"
+                              required="#{bindings.ProductPrice.hints.mandatory}"
+                              columns="#{bindings.ProductPrice.hints.displayWidth}"
+                              maximumLength="#{bindings.ProductPrice.hints.precision}"
+                              shortDesc="#{bindings.ProductPrice.hints.tooltip}" id="it3"
+                              binding="#{backingBeanScope.backing_CreateProduct.it3}">
+                    <f:validator binding="#{bindings.ProductPrice.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.ProductPrice.format}"/>
+                </af:inputText>
+                <af:selectOneChoice value="#{bindings.ProductCategory.inputValue}"
+                                    label="#{bindings.ProductCategory.label}"
+                                    required="#{bindings.ProductCategory.hints.mandatory}"
+                                    shortDesc="#{bindings.ProductCategory.hints.tooltip}" id="soc1"
+                                    binding="#{backingBeanScope.backing_CreateProduct.soc1}">
+                    <f:selectItems value="#{bindings.ProductCategory.items}" id="si1"
+                                   binding="#{backingBeanScope.backing_CreateProduct.si1}"/>
+                    <f:validator binding="#{bindings.ProductCategory.validator}"/>
+                </af:selectOneChoice>
+                <f:facet name="footer">
+                    <af:button text="Submit" id="b1" binding="#{backingBeanScope.backing_CreateProduct.b1}"
+                               actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}"/>
+                </f:facet>
+            </af:panelFormLayout>
         </f:facet>
-        <f:facet name="second"/>
     </af:panelSplitter>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_CreateProduct-->
 </ui:composition>

@@ -3,11 +3,13 @@ package view.backing;
 import oracle.adf.view.rich.component.rich.data.RichTable;
 import oracle.adf.view.rich.component.rich.input.RichInputDate;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
+import oracle.adf.view.rich.component.rich.layout.RichDecorativeBox;
 import oracle.adf.view.rich.component.rich.layout.RichGridCell;
 import oracle.adf.view.rich.component.rich.layout.RichGridRow;
 import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
 import oracle.adf.view.rich.component.rich.layout.RichPanelGridLayout;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
+import oracle.adf.view.rich.component.rich.output.RichSpacer;
 
 
 public class Viewrole {
@@ -32,6 +34,15 @@ public class Viewrole {
     private RichButton b4;
     private RichButton b5;
     private RichButton b6;
+    private RichDecorativeBox db1;
+    private RichGridRow gr3;
+    private RichGridCell gc7;
+    private RichGridCell gc6;
+    private RichGridCell gc5;
+    private RichPanelGridLayout pgl2;
+    private RichGridRow gr4;
+    private RichGridCell gc8;
+    private RichSpacer s1;
 
     public void setPgl1(RichPanelGridLayout pgl1) {
         this.pgl1 = pgl1;
@@ -185,5 +196,78 @@ public class Viewrole {
 
     public RichButton getB6() {
         return b6;
+    }
+
+    public void setDb1(RichDecorativeBox db1) {
+        this.db1 = db1;
+    }
+
+    public RichDecorativeBox getDb1() {
+        return db1;
+    }
+
+
+    public void setGr3(RichGridRow gr3) {
+        this.gr3 = gr3;
+    }
+
+    public RichGridRow getGr3() {
+        return gr3;
+    }
+
+    public void setGc7(RichGridCell gc7) {
+        this.gc7 = gc7;
+    }
+
+    public RichGridCell getGc7() {
+        return gc7;
+    }
+
+    public void setGc6(RichGridCell gc6) {
+        this.gc6 = gc6;
+    }
+
+    public RichGridCell getGc6() {
+        return gc6;
+    }
+
+    public void setGc5(RichGridCell gc5) {
+        this.gc5 = gc5;
+    }
+
+    public RichGridCell getGc5() {
+        return gc5;
+    }
+
+    public void setPgl2(RichPanelGridLayout pgl2) {
+        this.pgl2 = pgl2;
+    }
+
+    public RichPanelGridLayout getPgl2() {
+        return pgl2;
+    }
+
+    public void setGr4(RichGridRow gr4) {
+        this.gr4 = gr4;
+    }
+
+    public RichGridRow getGr4() {
+        return gr4;
+    }
+
+    public void setGc8(RichGridCell gc8) {
+        this.gc8 = gc8;
+    }
+
+    public RichGridCell getGc8() {
+        return gc8;
+    }
+
+    public void setS1(RichSpacer s1) {
+        this.s1 = s1;
+    }
+
+    public RichSpacer getS1() {
+        return s1;
     }
 }

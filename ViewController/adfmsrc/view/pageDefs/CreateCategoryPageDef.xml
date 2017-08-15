@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="CreateCategoryPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CategoryTableU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CategoryTableU1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CategoryTableU1Iterator" id="CategoryId">
+      <AttrNames>
+        <Item Value="CategoryId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CategoryTableU1Iterator" id="CategoryName">
+      <AttrNames>
+        <Item Value="CategoryName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CategoryTableU1Iterator" id="CategoryDescription">
+      <AttrNames>
+        <Item Value="CategoryDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+  </bindings>
+</pageDefinition>

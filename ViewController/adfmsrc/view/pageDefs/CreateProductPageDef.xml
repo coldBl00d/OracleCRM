@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="CreateProductPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ProductsU1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="ProductsU1Iterator" id="ProductName">
+      <AttrNames>
+        <Item Value="ProductName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ProductsU1Iterator" id="ProductDescription">
+      <AttrNames>
+        <Item Value="ProductDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ProductsU1Iterator" id="ProductPrice">
+      <AttrNames>
+        <Item Value="ProductPrice"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="ProductsU1Iterator" StaticList="false" Uses="LOV_ProductCategory" id="ProductCategory"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+  </bindings>
+</pageDefinition>

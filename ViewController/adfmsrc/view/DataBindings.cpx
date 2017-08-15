@@ -17,6 +17,14 @@
     <page path="/WEB-INF/flows/create-role-taskflow.xml#create-role-taskflow@CreateInsert"
           usageId="view_create_role_taskflow_create_role_taskflow_CreateInsertPageDef"/>
     <page path="/viewrole.jsff" usageId="view_viewrolePageDef"/>
+    <page path="/CreateCategory.jsff" usageId="view_CreateCategoryPageDef"/>
+    <page path="/WEB-INF/flows/create-product-category-taskflow.xml#create-product-category-taskflow@CreateInsert"
+          usageId="view_create_product_category_taskflow_create_product_category_taskflow_CreateInsertPageDef"/>
+    <page path="/ViewCategory.jsff" usageId="view_ViewCategoryPageDef"/>
+    <page path="/CreateProduct.jsff" usageId="view_CreateProductPageDef"/>
+    <page path="/WEB-INF/flows/create-product-taskflow.xml#create-product-taskflow@CreateInsert"
+          usageId="view_create_product_taskflow_create_product_taskflow_CreateInsertPageDef"/>
+    <page path="/ViewProduct.jsff" usageId="view_ViewProductPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled2PageDef" path="view.pageDefs.untitled2PageDef"/>
@@ -29,6 +37,14 @@
     <page id="view_create_role_taskflow_create_role_taskflow_CreateInsertPageDef"
           path="flows.create_role_taskflow_create_role_taskflow_CreateInsertPageDef"/>
     <page id="view_viewrolePageDef" path="view.pageDefs.viewrolePageDef"/>
+    <page id="view_CreateCategoryPageDef" path="view.pageDefs.CreateCategoryPageDef"/>
+    <page id="view_create_product_category_taskflow_create_product_category_taskflow_CreateInsertPageDef"
+          path="flows.create_product_category_taskflow_create_product_category_taskflow_CreateInsertPageDef"/>
+    <page id="view_ViewCategoryPageDef" path="view.pageDefs.ViewCategoryPageDef"/>
+    <page id="view_CreateProductPageDef" path="view.pageDefs.CreateProductPageDef"/>
+    <page id="view_create_product_taskflow_create_product_taskflow_CreateInsertPageDef"
+          path="flows.create_product_taskflow_create_product_taskflow_CreateInsertPageDef"/>
+    <page id="view_ViewProductPageDef" path="view.pageDefs.ViewProductPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AdminAppModuleDataControl" Package="model.AM"

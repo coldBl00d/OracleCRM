@@ -9,16 +9,41 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">345.0</property>
+         name="x">434.0</property>
       <property
-         name="start">true</property>
+         name="start">false</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>CreateProduct&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>CreateProduct&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">318.89648</property>
+         name="y">261.1953</property>
       <property
          name="page">/CreateProduct.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
+   <MethodCall
+      id="MethodCall5">
+      <property
+         name="activityId">CreateInsert</property>
+      <property
+         name="x">91.01465</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">419.79883</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="MethodCall5"
+      to="View2">
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="sdm:polyPoints">R50,132.01465,419.44824,393.0,260.84473,L50</property>
+   </ControlFlowCase>
 </SDM>

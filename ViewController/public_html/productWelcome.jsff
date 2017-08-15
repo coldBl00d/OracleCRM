@@ -3,7 +3,6 @@
     <af:panelGridLayout id="pgl1">
         <af:gridRow height="100%" id="gr1">
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
-                <!-- Content -->
                 <af:outputText value="product welcome" id="ot1" binding="#{backingBeanScope.backing_productWelcome.ot1}"/>
             </af:gridCell>
         </af:gridRow>

@@ -12,7 +12,7 @@
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_jprName" Value="../../Model.jpr"/>
     <Attr Name="_NamedConnection" Value="OracleCRMConnection"/>
-    <Attr Name="_appModuleNames0" Value="model.AM.AdminAppModule"/>
+    <Attr Name="_appModuleNames0" Value="model.AM.AppModuleAM"/>
   </DesignTime>
   <Containee
     Name="AM"
@@ -22,6 +22,10 @@
       <Attr Name="_AM" Value="true"/>
     </DesignTime>
   </Containee>
+  <Containee
+    Name="common"
+    PackageName="model.AM.common"
+    ObjectType="JboPackage"/>
   <Containee
     Name="eo"
     PackageName="model.eo"
@@ -39,16 +43,6 @@
     </DesignTime>
   </Containee>
   <Containee
-    Name="model"
-    PackageName="model"
-    ObjectType="JboPackage">
-    <DesignTime>
-      <Attr Name="_AS" Value="true"/>
-      <Attr Name="_VO" Value="true"/>
-      <Attr Name="_VL" Value="true"/>
-    </DesignTime>
-  </Containee>
-  <Containee
     Name="rvo"
     PackageName="model.rvo"
     ObjectType="JboPackage">
@@ -59,14 +53,6 @@
   <Containee
     Name="RVO"
     PackageName="model.RVO"
-    ObjectType="JboPackage">
-    <DesignTime>
-      <Attr Name="_VO" Value="true"/>
-    </DesignTime>
-  </Containee>
-  <Containee
-    Name="uvo"
-    PackageName="model.uvo"
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_VO" Value="true"/>

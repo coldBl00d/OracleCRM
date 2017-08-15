@@ -21,6 +21,33 @@ public class Launcher {
           "/WEB-INF/flows/create-user-taskflow.xml#create-user-taskflow",  
           true); 
       } 
+    
+    public void createRoleActivity(ActionEvent actionEvent) 
+      { 
+        /** 
+        * Example method when called repeatedly, will open another instance as 
+        * oppose to selecting a previously opened tab instance. Note the boolean 
+        * to create another tab instance is set to true. 
+        */ 
+          
+        _launchActivity( 
+          "New Role", 
+          "/WEB-INF/flows/create-role-taskflow.xml#create-role-taskflow",  
+          true); 
+      } 
+    
+    public void ViewRoleActivity(ActionEvent actionEvent) 
+    { 
+        /** 
+        * Example method to call a single instance task flow. Note the boolean 
+        * to create another tab instance is set to false. The taskflow ID is used 
+        * to track whether to create a new tab or select an existing one. 
+        */ 
+      _launchActivity( 
+        "View Roles", 
+        "/WEB-INF/flows/view-role-taskflow.xml#view-role-taskflow", 
+        false); 
+    } 
       
       public void ViewUserActivity(ActionEvent actionEvent) 
       { 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="viewrolePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RolesTableU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="RolesTableU1Iterator"/>
+    <searchRegion Binds="RolesTableU1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="RolesTableU1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="RolesTableU1Iterator" id="RolesTableU1">
+      <nodeDefinition DefName="model.UVO.RolesTableUVO" Name="RolesTableU10">
+        <AttrNames>
+          <Item Value="RoleName"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="RolesTableU1Iterator" id="RoleName">
+      <AttrNames>
+        <Item Value="RoleName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesTableU1Iterator" id="RoleDescription">
+      <AttrNames>
+        <Item Value="RoleDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesTableU1Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesTableU1Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

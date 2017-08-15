@@ -4,13 +4,6 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="UserCountR1" RangeSize="25" DataControl="AdminAppModuleDataControl" id="UserCountR1Iterator"/>
   </executables>
-  <bindings>
-    <attributeValues IterBinding="UserCountR1Iterator" id="Selectobjects0">
-      <AttrNames>
-        <Item Value="Selectobjects0"/>
-      </AttrNames>
-    </attributeValues>
-  </bindings>
+  <bindings/>
 </pageDefinition>

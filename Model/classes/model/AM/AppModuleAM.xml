@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModuleAM"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="RolesTableR1"
+    ViewObjectName="model.rvo.RolesTableRVO"/>
+  <ViewUsage
+    Name="RolesTableU1"
+    ViewObjectName="model.UVO.RolesTableUVO"/>
+</AppModule>

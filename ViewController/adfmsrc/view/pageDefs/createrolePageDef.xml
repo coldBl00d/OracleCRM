@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="createrolePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RolesTableU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="RolesTableU1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="RolesTableU1Iterator" id="CreateInsert" InstanceName="AppModuleAMDataControl.RolesTableU1"
+            DataControl="AppModuleAMDataControl" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <attributeValues IterBinding="RolesTableU1Iterator" id="RoleName">
+      <AttrNames>
+        <Item Value="RoleName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesTableU1Iterator" id="RoleDescription">
+      <AttrNames>
+        <Item Value="RoleDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesTableU1Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RolesTableU1Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+  </bindings>
+</pageDefinition>

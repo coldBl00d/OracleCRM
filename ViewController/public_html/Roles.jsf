@@ -7,7 +7,25 @@
                              binding="#{backingBeanScope.backing_Roles.pt1}">
                 <f:facet name="copyright"/>
                 <f:facet name="about"/>
-                <f:facet name="navigation"/>
+                <f:facet name="navigation">
+                    <af:decorativeBox id="db1" binding="#{backingBeanScope.backing_Roles.db1}">
+                        <f:facet name="top"/>
+                        <f:facet name="center">
+                            <af:panelGroupLayout id="pgl2" binding="#{backingBeanScope.backing_Roles.pgl2}"
+                                                 layout="vertical">
+                                <af:outputText value="Choose an activity" id="ot2"
+                                               binding="#{backingBeanScope.backing_Roles.ot2}"
+                                               inlineStyle="font-size:large; font-weight:bold;"/>
+                                <af:panelList id="pl1" binding="#{backingBeanScope.backing_Roles.pl1}">
+                                    <af:link text="New Role" id="l1" binding="#{backingBeanScope.backing_Roles.l1}"
+                                             actionListener="#{backingBeanScope.Launcher.createRoleActivity}"/>
+                                    <af:link text="View Roles" id="l2" binding="#{backingBeanScope.backing_Roles.l2}"
+                                             actionListener="#{backingBeanScope.Launcher.ViewRoleActivity}"/>
+                                </af:panelList>
+                            </af:panelGroupLayout>
+                        </f:facet>
+                    </af:decorativeBox>
+                </f:facet>
                 <f:facet name="globalLinks"/>
                 <f:facet name="status"/>
                 <f:facet name="globalToolbar"/>
@@ -17,13 +35,15 @@
                         <af:commandNavigationItem id="ni1" text="Users"
                                                   icon="#{resource['images:ic_account_circle_black_24dp_1x.png']}"
                                                   selected="false" binding="#{backingBeanScope.backing_Users.ni1}"
-                                                  action="goUsers"/>
+                                                  action="goUsers" partialSubmit="true" partialTriggers="::np1"/>
                         <af:commandNavigationItem id="ni2" text="Products"
                                                   icon="#{resource['images:ic_shopping_cart_black_24dp_1x.png']}"
-                                                  binding="#{backingBeanScope.backing_Users.ni2}" action="goProducts"/>
+                                                  binding="#{backingBeanScope.backing_Users.ni2}" action="goProducts"
+                                                  partialSubmit="true" partialTriggers="::np1"/>
                         <af:commandNavigationItem id="ni3" text="Roles"
                                                   icon="#{resource['images:ic_account_balance_black_24dp_1x.png']}"
-                                                  binding="#{backingBeanScope.backing_Users.ni3}" selected="true"/>
+                                                  binding="#{backingBeanScope.backing_Users.ni3}" selected="true"
+                                                  partialSubmit="true" partialTriggers="::np1"/>
                     </af:navigationPane>
                 </f:facet>
                 <f:facet name="welcome">

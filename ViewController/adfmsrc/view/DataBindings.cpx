@@ -13,6 +13,10 @@
     <page path="/Users.jsf" usageId="view_UsersPageDef"/>
     <page path="/Products.jsf" usageId="view_ProductsPageDef"/>
     <page path="/Roles.jsf" usageId="view_RolesPageDef"/>
+    <page path="/createrole.jsff" usageId="view_createrolePageDef"/>
+    <page path="/WEB-INF/flows/create-role-taskflow.xml#create-role-taskflow@CreateInsert"
+          usageId="view_create_role_taskflow_create_role_taskflow_CreateInsertPageDef"/>
+    <page path="/viewrole.jsff" usageId="view_viewrolePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled2PageDef" path="view.pageDefs.untitled2PageDef"/>
@@ -21,12 +25,21 @@
     <page id="view_UsersPageDef" path="view.pageDefs.UsersPageDef"/>
     <page id="view_ProductsPageDef" path="view.pageDefs.ProductsPageDef"/>
     <page id="view_RolesPageDef" path="view.pageDefs.RolesPageDef"/>
+    <page id="view_createrolePageDef" path="view.pageDefs.createrolePageDef"/>
+    <page id="view_create_role_taskflow_create_role_taskflow_CreateInsertPageDef"
+          path="flows.create_role_taskflow_create_role_taskflow_CreateInsertPageDef"/>
+    <page id="view_viewrolePageDef" path="view.pageDefs.viewrolePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AdminAppModuleDataControl" Package="model.AM"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" Configuration="AdminAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleAMDataControl" Package="model.AM"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleAMLocal" syncMode="Immediate"
                      xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
   </dataControlUsages>
 </Application>

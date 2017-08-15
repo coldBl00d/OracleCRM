@@ -1,9 +1,95 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-    <af:panelSplitter orientation="horizontal" splitterPosition="100" positionedFromEnd="true" id="ps1">
-        <f:facet name="first"/>
-        <f:facet name="second"/>
-    </af:panelSplitter>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewrole-->
+    <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_viewrole.pgl1}">
+        <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="gr1"
+                    binding="#{backingBeanScope.backing_viewrole.gr1}">
+            <af:gridCell marginStart="5px" width="65%" id="gc1" binding="#{backingBeanScope.backing_viewrole.gc1}"
+                         inlineStyle="padding-bottom:20px; padding-left:20px; padding-right:20px; padding-top:20px;">
+                <af:table value="#{bindings.RolesTableU1.collectionModel}" var="row"
+                          rows="#{bindings.RolesTableU1.rangeSize}"
+                          emptyText="#{bindings.RolesTableU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.RolesTableU1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.RolesTableU1.collectionModel.makeCurrent}" rowSelection="single"
+                          fetchSize="#{bindings.RolesTableU1.rangeSize}"
+                          filterModel="#{bindings.RolesTableU1Query.queryDescriptor}" filterVisible="true"
+                          queryListener="#{bindings.RolesTableU1Query.processQuery}" varStatus="vs" id="t1"
+                          binding="#{backingBeanScope.backing_viewrole.t1}">
+                    <af:column sortProperty="#{bindings.RolesTableU1.hints.RoleName.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.RolesTableU1.hints.RoleName.label}" id="c1">
+                        <af:outputText value="#{row.RoleName}"
+                                       shortDesc="#{bindings.RolesTableU1.hints.RoleName.tooltip}" id="ot1"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.RolesTableU1.hints.StartDate.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.RolesTableU1.hints.StartDate.label}" id="c2">
+                        <f:facet name="filter">
+                            <af:inputDate value="#{bindings.RolesTableU1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
+                                          id="id1" binding="#{backingBeanScope.backing_viewrole.id1}">
+                                <af:convertDateTime pattern="#{bindings.RolesTableU1.hints.StartDate.format}"/>
+                            </af:inputDate>
+                        </f:facet>
+                        <af:outputText value="#{row.StartDate}"
+                                       shortDesc="#{bindings.RolesTableU1.hints.StartDate.tooltip}" id="ot2">
+                            <af:convertDateTime pattern="#{bindings.RolesTableU1.hints.StartDate.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.RolesTableU1.hints.EndDate.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.RolesTableU1.hints.EndDate.label}" id="c3">
+                        <f:facet name="filter">
+                            <af:inputDate value="#{bindings.RolesTableU1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
+                                          id="id2" binding="#{backingBeanScope.backing_viewrole.id2}">
+                                <af:convertDateTime pattern="#{bindings.RolesTableU1.hints.EndDate.format}"/>
+                            </af:inputDate>
+                        </f:facet>
+                        <af:outputText value="#{row.EndDate}" shortDesc="#{bindings.RolesTableU1.hints.EndDate.tooltip}"
+                                       id="ot3">
+                            <af:convertDateTime pattern="#{bindings.RolesTableU1.hints.EndDate.format}"/>
+                        </af:outputText>
+                    </af:column>
+                </af:table>
+            </af:gridCell>
+            <af:gridCell marginStart="5px" width="35%" marginEnd="5px" id="gc2"
+                         binding="#{backingBeanScope.backing_viewrole.gc2}">
+                <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_viewrole.pfl1}">
+                    <af:inputText value="#{bindings.RoleName.inputValue}" label="#{bindings.RoleName.hints.label}"
+                                  required="#{bindings.RoleName.hints.mandatory}"
+                                  columns="#{bindings.RoleName.hints.displayWidth}"
+                                  maximumLength="#{bindings.RoleName.hints.precision}"
+                                  shortDesc="#{bindings.RoleName.hints.tooltip}" id="it1"
+                                  binding="#{backingBeanScope.backing_viewrole.it1}">
+                        <f:validator binding="#{bindings.RoleName.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.RoleDescription.inputValue}"
+                                  label="#{bindings.RoleDescription.hints.label}"
+                                  required="#{bindings.RoleDescription.hints.mandatory}"
+                                  columns="#{bindings.RoleDescription.hints.displayWidth}"
+                                  maximumLength="#{bindings.RoleDescription.hints.precision}"
+                                  shortDesc="#{bindings.RoleDescription.hints.tooltip}" id="it2"
+                                  binding="#{backingBeanScope.backing_viewrole.it2}">
+                        <f:validator binding="#{bindings.RoleDescription.validator}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
+                                  required="#{bindings.StartDate.hints.mandatory}"
+                                  columns="#{bindings.StartDate.hints.displayWidth}"
+                                  shortDesc="#{bindings.StartDate.hints.tooltip}" id="id3"
+                                  binding="#{backingBeanScope.backing_viewrole.id3}">
+                        <f:validator binding="#{bindings.StartDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+                    </af:inputDate>
+                    <af:inputDate value="#{bindings.EndDate.inputValue}" label="#{bindings.EndDate.hints.label}"
+                                  required="#{bindings.EndDate.hints.mandatory}"
+                                  columns="#{bindings.EndDate.hints.displayWidth}"
+                                  shortDesc="#{bindings.EndDate.hints.tooltip}" id="id4"
+                                  binding="#{backingBeanScope.backing_viewrole.id4}">
+                        <f:validator binding="#{bindings.EndDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                    </af:inputDate>
+                    <f:facet name="footer">
+                        <af:button text="Submit" id="b1" binding="#{backingBeanScope.backing_viewrole.b1}"/>
+                    </f:facet>
+                </af:panelFormLayout>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
 </ui:composition>

@@ -1,20 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-    <af:panelGridLayout id="pgl1">
-        <af:gridRow height="100%" id="gr1">
-            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
-                <!-- Content -->
-                <af:panelLabelAndMessage label="User Counts: " id="plam1"
-                                         binding="#{backingBeanScope.backing_UserStats.plam1}">
-                    <af:outputText value="#{bindings.Selectobjects0.inputValue}"
-                                   shortDesc="#{bindings.Selectobjects0.hints.tooltip}" id="ot1"
-                                   binding="#{backingBeanScope.backing_UserStats.ot1}">
-                        <af:convertNumber groupingUsed="false" pattern="#{bindings.Selectobjects0.format}"/>
-                    </af:outputText>
-                </af:panelLabelAndMessage>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_UserStats-->
+    <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_UserStats.pgl1}" inlineStyle="min-height:100%;">
+        <af:gridRow marginTop="5px" height="50%" id="gr1" binding="#{backingBeanScope.backing_UserStats.gr1}">
+            <af:gridCell marginStart="5px" width="50%" id="gc1" binding="#{backingBeanScope.backing_UserStats.gc1}">
+                <af:panelDashboard id="pd1" binding="#{backingBeanScope.backing_UserStats.pd1}">
+                    <af:panelBox text="PanelBox1" id="pb1" binding="#{backingBeanScope.backing_UserStats.pb1}"
+                                 inlineStyle="width:348px; height:251px;">
+                        <f:facet name="toolbar"/>
+                    </af:panelBox>
+                </af:panelDashboard>
             </af:gridCell>
+            <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2"
+                         binding="#{backingBeanScope.backing_UserStats.gc2}"/>
+        </af:gridRow>
+        <af:gridRow marginTop="5px" height="50%" marginBottom="5px" id="gr2"
+                    binding="#{backingBeanScope.backing_UserStats.gr2}">
+            <af:gridCell marginStart="5px" width="50%" id="gc3" binding="#{backingBeanScope.backing_UserStats.gc3}"/>
+            <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4"
+                         binding="#{backingBeanScope.backing_UserStats.gc4}"/>
         </af:gridRow>
     </af:panelGridLayout>
-    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_UserStats-->
 </ui:composition>

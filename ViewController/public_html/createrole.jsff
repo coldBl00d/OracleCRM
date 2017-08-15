@@ -1,9 +1,48 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
     <af:panelGridLayout id="pgl1">
         <af:gridRow height="100%" id="gr1">
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
                 <!-- Content -->
+                <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_createrole.pfl1}">
+                    <af:inputText value="#{bindings.RoleName.inputValue}" label="#{bindings.RoleName.hints.label}"
+                                  required="#{bindings.RoleName.hints.mandatory}"
+                                  columns="#{bindings.RoleName.hints.displayWidth}"
+                                  maximumLength="#{bindings.RoleName.hints.precision}"
+                                  shortDesc="#{bindings.RoleName.hints.tooltip}" id="it1"
+                                  binding="#{backingBeanScope.backing_createrole.it1}">
+                        <f:validator binding="#{bindings.RoleName.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.RoleDescription.inputValue}"
+                                  label="#{bindings.RoleDescription.hints.label}"
+                                  required="#{bindings.RoleDescription.hints.mandatory}"
+                                  columns="#{bindings.RoleDescription.hints.displayWidth}"
+                                  maximumLength="#{bindings.RoleDescription.hints.precision}"
+                                  shortDesc="#{bindings.RoleDescription.hints.tooltip}" id="it2"
+                                  binding="#{backingBeanScope.backing_createrole.it2}">
+                        <f:validator binding="#{bindings.RoleDescription.validator}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
+                                  required="#{bindings.StartDate.hints.mandatory}"
+                                  columns="#{bindings.StartDate.hints.displayWidth}"
+                                  shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1"
+                                  binding="#{backingBeanScope.backing_createrole.id1}">
+                        <f:validator binding="#{bindings.StartDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+                    </af:inputDate>
+                    <af:inputDate value="#{bindings.EndDate.inputValue}" label="#{bindings.EndDate.hints.label}"
+                                  required="#{bindings.EndDate.hints.mandatory}"
+                                  columns="#{bindings.EndDate.hints.displayWidth}"
+                                  shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2"
+                                  binding="#{backingBeanScope.backing_createrole.id2}">
+                        <f:validator binding="#{bindings.EndDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                    </af:inputDate>
+                    <af:button actionListener="#{bindings.Commit.execute}" text="Create"
+                               disabled="#{!bindings.Commit.enabled}" id="b1"
+                               binding="#{backingBeanScope.backing_createrole.b1}"/>
+                </af:panelFormLayout>
             </af:gridCell>
         </af:gridRow>
     </af:panelGridLayout>

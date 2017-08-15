@@ -17,14 +17,15 @@
                         <af:commandNavigationItem id="ni1" text="Users"
                                                   icon="#{resource['images:ic_account_circle_black_24dp_1x.png']}"
                                                   selected="false" binding="#{backingBeanScope.backing_Users.ni1}"
-                                                  action="goUsers"/>
+                                                  action="goUsers" partialSubmit="true" partialTriggers="::np1"/>
                         <af:commandNavigationItem id="ni2" text="Products"
                                                   icon="#{resource['images:ic_shopping_cart_black_24dp_1x.png']}"
                                                   binding="#{backingBeanScope.backing_Users.ni2}"
-                                                  selected="true"/>
+                                                  selected="true" partialSubmit="true" partialTriggers="::np1"/>
                         <af:commandNavigationItem id="ni3" text="Roles"
                                                   icon="file:/C:/JDeveloper/mywork/OracleCRM/Icons/ic_account_balance_black_24dp/web/ic_account_balance_black_24dp_1x.png"
-                                                  binding="#{backingBeanScope.backing_Users.ni3}" action="goRoles"/>
+                                                  binding="#{backingBeanScope.backing_Users.ni3}" action="goRoles"
+                                                  partialTriggers="::np1" partialSubmit="true"/>
                     </af:navigationPane>
                 </f:facet>
                 <f:facet name="welcome">

@@ -25,8 +25,13 @@ public class Viewrole {
     private RichInputText it2;
     private RichInputDate id3;
     private RichInputDate id4;
-    private RichButton b2;
     private RichButton b3;
+    private RichGridRow gr2;
+    private RichGridCell gc3;
+    private RichGridCell gc4;
+    private RichButton b4;
+    private RichButton b5;
+    private RichButton b6;
 
     public void setPgl1(RichPanelGridLayout pgl1) {
         this.pgl1 = pgl1;
@@ -125,15 +130,6 @@ public class Viewrole {
     }
 
 
-    public void setB2(RichButton b2) {
-        this.b2 = b2;
-    }
-
-    public RichButton getB2() {
-        return b2;
-    }
-
-
     public void setB3(RichButton b3) {
         this.b3 = b3;
     }
@@ -143,4 +139,51 @@ public class Viewrole {
     }
 
 
+    public void setGr2(RichGridRow gr2) {
+        this.gr2 = gr2;
+    }
+
+    public RichGridRow getGr2() {
+        return gr2;
+    }
+
+    public void setGc3(RichGridCell gc3) {
+        this.gc3 = gc3;
+    }
+
+    public RichGridCell getGc3() {
+        return gc3;
+    }
+
+    public void setGc4(RichGridCell gc4) {
+        this.gc4 = gc4;
+    }
+
+    public RichGridCell getGc4() {
+        return gc4;
+    }
+
+    public void setB4(RichButton b4) {
+        this.b4 = b4;
+    }
+
+    public RichButton getB4() {
+        return b4;
+    }
+
+    public void setB5(RichButton b5) {
+        this.b5 = b5;
+    }
+
+    public RichButton getB5() {
+        return b5;
+    }
+
+    public void setB6(RichButton b6) {
+        this.b6 = b6;
+    }
+
+    public RichButton getB6() {
+        return b6;
+    }
 }

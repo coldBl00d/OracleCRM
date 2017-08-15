@@ -3,10 +3,11 @@
                 xmlns:f="http://java.sun.com/jsf/core">
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_viewrole-->
     <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_viewrole.pgl1}">
-        <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="gr1"
+        <af:gridRow marginTop="5px" height="90%" marginBottom="5px" id="gr1"
                     binding="#{backingBeanScope.backing_viewrole.gr1}">
             <af:gridCell marginStart="5px" width="65%" id="gc1" binding="#{backingBeanScope.backing_viewrole.gc1}"
-                         inlineStyle="padding-bottom:20px; padding-left:20px; padding-right:20px; padding-top:20px;">
+                         inlineStyle="padding-bottom:20px; padding-left:20px; padding-right:20px; padding-top:20px;"
+                         halign="stretch">
                 <af:table value="#{bindings.RolesTableU1.collectionModel}" var="row"
                           rows="#{bindings.RolesTableU1.rangeSize}"
                           emptyText="#{bindings.RolesTableU1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -15,7 +16,8 @@
                           fetchSize="#{bindings.RolesTableU1.rangeSize}"
                           filterModel="#{bindings.RolesTableU1Query.queryDescriptor}" filterVisible="true"
                           queryListener="#{bindings.RolesTableU1Query.processQuery}" varStatus="vs" id="t1"
-                          binding="#{backingBeanScope.backing_viewrole.t1}" partialTriggers="::b3">
+                          binding="#{backingBeanScope.backing_viewrole.t1}" partialTriggers="::b3 ::b1 ::b6"
+                          columnStretching="last">
                     <af:column sortProperty="#{bindings.RolesTableU1.hints.RoleName.name}" filterable="true"
                                sortable="true" headerText="#{bindings.RolesTableU1.hints.RoleName.label}" id="c1">
                         <af:outputText value="#{row.RoleName}"
@@ -85,13 +87,26 @@
                         <f:validator binding="#{bindings.EndDate.validator}"/>
                         <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
                     </af:inputDate>
-                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b2"
-                               binding="#{backingBeanScope.backing_viewrole.b2}"/>
-                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                               disabled="#{!bindings.Delete.enabled}" id="b3"
+                    <af:button actionListener="#{bindings.Execute.execute}" text="Execute"
+                               disabled="#{!bindings.Execute.enabled}" id="b6"
+                               binding="#{backingBeanScope.backing_viewrole.b6}"/>
+                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete" id="b3"
                                binding="#{backingBeanScope.backing_viewrole.b3}"/>
                 </af:panelFormLayout>
             </af:gridCell>
+        </af:gridRow>
+        <af:gridRow id="gr2" binding="#{backingBeanScope.backing_viewrole.gr2}" height="10%">
+            <af:gridCell id="gc3" binding="#{backingBeanScope.backing_viewrole.gc3}">
+                <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                           disabled="#{!bindings.Commit.enabled}" id="b4"
+                           binding="#{backingBeanScope.backing_viewrole.b4}"/>
+                <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
+                           disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b5"
+                           binding="#{backingBeanScope.backing_viewrole.b5}">
+                    <af:resetActionListener/>
+                </af:button>
+            </af:gridCell>
+            <af:gridCell id="gc4" binding="#{backingBeanScope.backing_viewrole.gc4}"/>
         </af:gridRow>
     </af:panelGridLayout>
 </ui:composition>

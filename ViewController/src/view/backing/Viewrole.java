@@ -25,7 +25,8 @@ public class Viewrole {
     private RichInputText it2;
     private RichInputDate id3;
     private RichInputDate id4;
-    private RichButton b1;
+    private RichButton b2;
+    private RichButton b3;
 
     public void setPgl1(RichPanelGridLayout pgl1) {
         this.pgl1 = pgl1;
@@ -123,11 +124,23 @@ public class Viewrole {
         return id4;
     }
 
-    public void setB1(RichButton b1) {
-        this.b1 = b1;
+
+    public void setB2(RichButton b2) {
+        this.b2 = b2;
     }
 
-    public RichButton getB1() {
-        return b1;
+    public RichButton getB2() {
+        return b2;
     }
+
+
+    public void setB3(RichButton b3) {
+        this.b3 = b3;
+    }
+
+    public RichButton getB3() {
+        return b3;
+    }
+
+
 }

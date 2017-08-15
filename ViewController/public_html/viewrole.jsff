@@ -15,7 +15,7 @@
                           fetchSize="#{bindings.RolesTableU1.rangeSize}"
                           filterModel="#{bindings.RolesTableU1Query.queryDescriptor}" filterVisible="true"
                           queryListener="#{bindings.RolesTableU1Query.processQuery}" varStatus="vs" id="t1"
-                          binding="#{backingBeanScope.backing_viewrole.t1}">
+                          binding="#{backingBeanScope.backing_viewrole.t1}" partialTriggers="::b3">
                     <af:column sortProperty="#{bindings.RolesTableU1.hints.RoleName.name}" filterable="true"
                                sortable="true" headerText="#{bindings.RolesTableU1.hints.RoleName.label}" id="c1">
                         <af:outputText value="#{row.RoleName}"
@@ -66,7 +66,7 @@
                                   columns="#{bindings.RoleDescription.hints.displayWidth}"
                                   maximumLength="#{bindings.RoleDescription.hints.precision}"
                                   shortDesc="#{bindings.RoleDescription.hints.tooltip}" id="it2"
-                                  binding="#{backingBeanScope.backing_viewrole.it2}">
+                                  binding="#{backingBeanScope.backing_viewrole.it2}" rows="5">
                         <f:validator binding="#{bindings.RoleDescription.validator}"/>
                     </af:inputText>
                     <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
@@ -85,9 +85,11 @@
                         <f:validator binding="#{bindings.EndDate.validator}"/>
                         <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
                     </af:inputDate>
-                    <f:facet name="footer">
-                        <af:button text="Submit" id="b1" binding="#{backingBeanScope.backing_viewrole.b1}"/>
-                    </f:facet>
+                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b2"
+                               binding="#{backingBeanScope.backing_viewrole.b2}"/>
+                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                               disabled="#{!bindings.Delete.enabled}" id="b3"
+                               binding="#{backingBeanScope.backing_viewrole.b3}"/>
                 </af:panelFormLayout>
             </af:gridCell>
         </af:gridRow>

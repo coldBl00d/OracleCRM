@@ -13,4 +13,25 @@
   <ViewUsage
     Name="RolesTableU1"
     ViewObjectName="model.UVO.RolesTableUVO"/>
+  <ViewUsage
+    Name="LocationU1"
+    ViewObjectName="model.UVO.LocationUVO"/>
+  <ViewUsage
+    Name="AddressU1"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="UsersU1"
+    ViewObjectName="model.UVO.UsersUVO"/>
+  <ViewLinkUsage
+    Name="AddressFk1VL1"
+    ViewLinkObjectName="model.UVO.AddressFk1VL"
+    SrcViewUsageName="model.AM.AppModuleAM.LocationU1"
+    DstViewUsageName="model.AM.AppModuleAM.AddressU1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="UsersFk1VL1"
+    ViewLinkObjectName="model.UVO.UsersFk1VL"
+    SrcViewUsageName="model.AM.AppModuleAM.AddressU1"
+    DstViewUsageName="model.AM.AppModuleAM.UsersU1"
+    Reversed="false"/>
 </AppModule>

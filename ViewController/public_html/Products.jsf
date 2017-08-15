@@ -7,7 +7,29 @@
                              binding="#{backingBeanScope.backing_Products.pt1}">
                 <f:facet name="copyright"/>
                 <f:facet name="about"/>
-                <f:facet name="navigation"/>
+                <f:facet name="navigation">
+                    <af:decorativeBox id="db1" binding="#{backingBeanScope.backing_Products.db1}">
+                        <f:facet name="top"/>
+                        <f:facet name="center">
+                            <af:panelGroupLayout id="pgl1" binding="#{backingBeanScope.backing_Products.pgl1}"
+                                                 layout="vertical">
+                                <af:outputText value="Choose your activity" id="ot1"
+                                               binding="#{backingBeanScope.backing_Products.ot1}"
+                                               inlineStyle="font-size:large; font-weight:bold;"/>
+                                <af:panelList id="pl1" binding="#{backingBeanScope.backing_Products.pl1}">
+                                    <af:link text="New product" id="l1" binding="#{backingBeanScope.backing_Products.l1}"
+                                             actionListener="#{backingBeanScope.Launcher.createProductActivity}"/>
+                                    <af:link text="New category" id="l2" binding="#{backingBeanScope.backing_Products.l2}"
+                                             actionListener="#{backingBeanScope.Launcher.createProductCategoryActivity}"/>
+                                    <af:link text="View products" id="l3" binding="#{backingBeanScope.backing_Products.l3}"
+                                             actionListener="#{backingBeanScope.Launcher.ViewProductActivity}"/>
+                                    <af:link text="View category" id="l4" binding="#{backingBeanScope.backing_Products.l4}"
+                                             actionListener="#{backingBeanScope.Launcher.ViewProductCategoryActivity}"/>
+                                </af:panelList>
+                            </af:panelGroupLayout>
+                        </f:facet>
+                    </af:decorativeBox>
+                </f:facet>
                 <f:facet name="globalLinks"/>
                 <f:facet name="status"/>
                 <f:facet name="globalToolbar"/>

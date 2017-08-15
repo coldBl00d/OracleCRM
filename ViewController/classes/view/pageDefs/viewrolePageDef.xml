@@ -40,7 +40,6 @@
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
     <action IterBinding="RolesTableU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action IterBinding="RolesTableU1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction"
             DataControl="AppModuleAMDataControl"/>
     <action IterBinding="RolesTableU1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>

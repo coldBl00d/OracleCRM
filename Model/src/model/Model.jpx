@@ -13,7 +13,6 @@
     <Attr Name="_jprName" Value="../../Model.jpr"/>
     <Attr Name="_NamedConnection" Value="OracleCRMConnection"/>
     <Attr Name="_appModuleNames0" Value="model.AM.AppModuleAM"/>
-    <Attr Name="_appModuleNames1" Value="model.eo.AppModuleAM"/>
   </DesignTime>
   <Containee
     Name="AM"
@@ -34,7 +33,6 @@
     <DesignTime>
       <Attr Name="_EO" Value="true"/>
       <Attr Name="_AS" Value="true"/>
-      <Attr Name="_AM" Value="true"/>
     </DesignTime>
   </Containee>
   <Containee

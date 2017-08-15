@@ -21,6 +21,32 @@ public class Launcher {
           "/WEB-INF/flows/create-user-taskflow.xml#create-user-taskflow",  
           true); 
       } 
+    public void createProductActivity(ActionEvent actionEvent) 
+      { 
+        /** 
+        * Example method when called repeatedly, will open another instance as 
+        * oppose to selecting a previously opened tab instance. Note the boolean 
+        * to create another tab instance is set to true. 
+        */ 
+          
+        _launchActivity( 
+          "New Product", 
+          "/WEB-INF/flows/create-product-taskflow.xml#create-product-taskflow",  
+          true); 
+      } 
+    public void createProductCategoryActivity(ActionEvent actionEvent) 
+      { 
+        /** 
+        * Example method when called repeatedly, will open another instance as 
+        * oppose to selecting a previously opened tab instance. Note the boolean 
+        * to create another tab instance is set to true. 
+        */ 
+          
+        _launchActivity( 
+          "New Product Category", 
+          "/WEB-INF/flows/create-product-category-taskflow.xml#create-product-category-taskflow",  
+          true); 
+      } 
     
     public void createRoleActivity(ActionEvent actionEvent) 
       { 
@@ -61,6 +87,30 @@ public class Launcher {
           "/WEB-INF/flows/view-user-taskflow.xml#view-user-taskflow", 
           false); 
       } 
+    public void ViewProductActivity(ActionEvent actionEvent) 
+    { 
+        /** 
+        * Example method to call a single instance task flow. Note the boolean 
+        * to create another tab instance is set to false. The taskflow ID is used 
+        * to track whether to create a new tab or select an existing one. 
+        */ 
+      _launchActivity( 
+        "View Products", 
+        "/WEB-INF/flows/view-product-taskflow.xml#view-product-taskflow", 
+        false); 
+    } 
+    public void ViewProductCategoryActivity(ActionEvent actionEvent) 
+    { 
+        /** 
+        * Example method to call a single instance task flow. Note the boolean 
+        * to create another tab instance is set to false. The taskflow ID is used 
+        * to track whether to create a new tab or select an existing one. 
+        */ 
+      _launchActivity( 
+        "View Product Categories", 
+        "/WEB-INF/flows/view-product-category.xml#view-product-category", 
+        false); 
+    } 
       
       public void editUserActivity(ActionEvent actionEvent) 
       { 

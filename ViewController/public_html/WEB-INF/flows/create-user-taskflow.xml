@@ -14,6 +14,22 @@
     <view id="CreateUserStart">
       <page>/CreateUserStart.jsff</page>
     </view>
+    <view id="view1"></view>
+    <view id="view2"></view>
+    <control-flow-rule id="__2">
+      <from-activity-id>CreateUserStart</from-activity-id>
+      <control-flow-case id="__3">
+        <from-outcome>manager</from-outcome>
+        <to-activity-id>view1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <to-activity-id>view2</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>vp</from-outcome>
+        <to-activity-id>view1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

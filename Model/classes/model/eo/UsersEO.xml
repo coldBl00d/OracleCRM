@@ -167,6 +167,13 @@
     AssociationOtherEnd="model.eo.UserRoleLinkFk1ASSOC.Users"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="RolesTable"
+    Association="model.AM.UserRoleASSOC"
+    AssociationEnd="model.AM.UserRoleASSOC.RolesTable"
+    AssociationOtherEnd="model.AM.UserRoleASSOC.Users"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="UseraccountsPk"
     PrimaryKey="true">

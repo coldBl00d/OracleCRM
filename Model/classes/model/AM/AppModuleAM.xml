@@ -28,6 +28,9 @@
   <ViewUsage
     Name="ProductsU1"
     ViewObjectName="model.UVO.ProductsUVO"/>
+  <ViewUsage
+    Name="UserFormU1"
+    ViewObjectName="model.UVO.UserFormUVO"/>
   <ViewLinkUsage
     Name="AddressFk1VL1"
     ViewLinkObjectName="model.UVO.AddressFk1VL"

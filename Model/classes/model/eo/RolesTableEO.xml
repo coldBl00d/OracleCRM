@@ -62,7 +62,13 @@
     Type="java.sql.Timestamp"
     ColumnType="DATE"
     TableName="ROLES_TABLE"/>
-  
+  <AccessorAttribute
+    Name="Users"
+    Association="model.AM.UserRoleASSOC"
+    AssociationEnd="model.AM.UserRoleASSOC.Users"
+    AssociationOtherEnd="model.AM.UserRoleASSOC.RolesTable"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="RolesPk"
     PrimaryKey="true">

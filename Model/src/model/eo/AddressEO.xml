@@ -12,15 +12,18 @@
   BindingStyle="OracleName">
   <Attribute
     Name="AddressId"
-    IsNotNull="true"
     Precision="18"
     Scale="0"
     ColumnName="ADDRESS_ID"
     SQLType="NUMERIC"
-    Type="java.lang.Long"
+    Type="oracle.jbo.domain.DBSequence"
     ColumnType="NUMBER"
     TableName="ADDRESS"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    IsUpdateable="while_insert"
+    DefaultValue="@0"
+    Domain="oracle.jbo.domain.DBSequence"
+    RetrievedOnInsert="true"/>
   <Attribute
     Name="BuildingInfo"
     IsNotNull="true"

@@ -5,19 +5,11 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="ProductsU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ProductsU1Iterator"/>
+    <iterator Binds="CategoryTableU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CategoryTableU1Iterator"/>
     <searchRegion Binds="ProductsU1Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="ProductsU1Query"/>
-    <iterator Binds="CategoryTableU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="CategoryTableU1Iterator"/>
   </executables>
   <bindings>
-    <tree IterBinding="ProductsU1Iterator" id="ProductsU1">
-      <nodeDefinition DefName="model.UVO.ProductsUVO" Name="ProductsU10">
-        <AttrNames>
-          <Item Value="ProductName"/>
-          <Item Value="ProductPrice"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <attributeValues IterBinding="ProductsU1Iterator" id="ProductName">
       <AttrNames>
         <Item Value="ProductName"/>
@@ -39,5 +31,13 @@
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction"
             DataControl="AppModuleAMDataControl"/>
     <action IterBinding="CategoryTableU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="ProductsU1Iterator" id="ProductsU1">
+      <nodeDefinition DefName="model.UVO.ProductsUVO" Name="ProductsU10">
+        <AttrNames>
+          <Item Value="ProductName"/>
+          <Item Value="ProductPrice"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

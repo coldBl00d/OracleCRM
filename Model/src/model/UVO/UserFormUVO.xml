@@ -28,7 +28,6 @@
     Association="model.eo.UsersFk1ASSOC"
     AssociationEnd="model.eo.UsersFk1ASSOC.Address"
     SourceUsage="model.UVO.UserFormUVO.UsersEO"
-    Reference="true"
     JoinType="INNER JOIN">
     <DesignTime>
       <AttrArray Name="_dstAttributes">
@@ -45,7 +44,6 @@
     Association="model.eo.AddressFk1ASSOC"
     AssociationEnd="model.eo.AddressFk1ASSOC.Location"
     SourceUsage="model.UVO.UserFormUVO.AddressEO"
-    Reference="true"
     DeleteParticipant="false"
     JoinType="INNER JOIN">
     <DesignTime>
@@ -63,7 +61,8 @@
     PrecisionRule="true"
     EntityAttrName="UserId"
     EntityUsage="UsersEO"
-    AliasName="USER_ID"/>
+    AliasName="USER_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="UName"
     IsNotNull="true"
@@ -116,7 +115,8 @@
     PrecisionRule="true"
     EntityAttrName="StartDate"
     EntityUsage="UsersEO"
-    AliasName="START_DATE"/>
+    AliasName="START_DATE"
+    PrimaryKey="true"/>
   <ViewAttribute
     Name="EndDate"
     PrecisionRule="true"
@@ -130,18 +130,13 @@
     EntityUsage="UsersEO"
     AliasName="SALES_TEAM_ID"/>
   <ViewAttribute
-    Name="AddressId1"
-    PrecisionRule="true"
-    EntityAttrName="AddressId"
-    EntityUsage="UsersEO"
-    AliasName="ADDRESS_ID1"/>
-  <ViewAttribute
     Name="AddressId"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="AddressId"
     EntityUsage="AddressEO"
-    AliasName="ADDRESS_ID"/>
+    AliasName="ADDRESS_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="BuildingInfo"
     IsNotNull="true"
@@ -154,14 +149,8 @@
     PrecisionRule="true"
     EntityAttrName="StreetName"
     EntityUsage="AddressEO"
-    AliasName="STREET_NAME"/>
-  <ViewAttribute
-    Name="Zipcode1"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Zipcode"
-    EntityUsage="AddressEO"
-    AliasName="ZIPCODE1"/>
+    AliasName="STREET_NAME"
+    IsUpdateable="false"/>
   <ViewAttribute
     Name="ZipCode"
     IsNotNull="true"
@@ -169,6 +158,33 @@
     EntityAttrName="ZipCode"
     EntityUsage="LocationEO"
     AliasName="ZIP_CODE"/>
+  <ViewAttribute
+    Name="City"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="City"
+    EntityUsage="LocationEO"
+    AliasName="CITY"/>
+  <ViewAttribute
+    Name="State"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="State"
+    EntityUsage="LocationEO"
+    AliasName="STATE"/>
+  <ViewAttribute
+    Name="Country"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Country"
+    EntityUsage="LocationEO"
+    AliasName="COUNTRY"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="UserId"/>
+    <Item Value="StartDate"/>
+    <Item Value="AddressId"/>
+    <Item Value="ZipCode"/>
+  </AttrArray>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

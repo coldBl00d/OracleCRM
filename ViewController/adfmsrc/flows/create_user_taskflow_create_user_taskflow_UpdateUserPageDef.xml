@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24"
+                id="create_user_taskflow_create_user_taskflow_UpdateUserPageDef" Package="flows" SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <methodAction id="UpdateUser" RequiresUpdateModel="true" Action="invokeMethod" MethodName="UpdateUser"
+                  IsViewObjectMethod="false" DataControl="AppModuleAMDataControl"
+                  InstanceName="bindings.UpdateUser.dataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>

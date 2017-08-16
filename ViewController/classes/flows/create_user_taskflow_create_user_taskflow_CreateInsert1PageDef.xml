@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24"
+                id="create_user_taskflow_create_user_taskflow_CreateInsert1PageDef" Package="flows"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="AddressU2" RangeSize="25" DataControl="AppModuleAMDataControl" id="AddressU2Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="AddressU2Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

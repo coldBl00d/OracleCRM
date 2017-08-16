@@ -25,6 +25,13 @@
     <page path="/WEB-INF/flows/create-product-taskflow.xml#create-product-taskflow@CreateInsert"
           usageId="view_create_product_taskflow_create_product_taskflow_CreateInsertPageDef"/>
     <page path="/ViewProduct.jsff" usageId="view_ViewProductPageDef"/>
+    <page path="/CreateUserStart.jsff" usageId="view_CreateUserStartPageDef"/>
+    <page path="/WEB-INF/flows/create-user-taskflow.xml#create-user-taskflow@CreateInsert"
+          usageId="view_create_user_taskflow_create_user_taskflow_CreateInsertPageDef"/>
+    <page path="/WEB-INF/flows/create-user-taskflow.xml#create-user-taskflow@CreateInsert1"
+          usageId="view_create_user_taskflow_create_user_taskflow_CreateInsert1PageDef"/>
+    <page path="/WEB-INF/flows/create-user-taskflow.xml#create-user-taskflow@UpdateUser"
+          usageId="view_create_user_taskflow_create_user_taskflow_UpdateUserPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled2PageDef" path="view.pageDefs.untitled2PageDef"/>
@@ -45,6 +52,13 @@
     <page id="view_create_product_taskflow_create_product_taskflow_CreateInsertPageDef"
           path="flows.create_product_taskflow_create_product_taskflow_CreateInsertPageDef"/>
     <page id="view_ViewProductPageDef" path="view.pageDefs.ViewProductPageDef"/>
+    <page id="view_CreateUserStartPageDef" path="view.pageDefs.CreateUserStartPageDef"/>
+    <page id="view_create_user_taskflow_create_user_taskflow_CreateInsertPageDef"
+          path="flows.create_user_taskflow_create_user_taskflow_CreateInsertPageDef"/>
+    <page id="view_create_user_taskflow_create_user_taskflow_CreateInsert1PageDef"
+          path="flows.create_user_taskflow_create_user_taskflow_CreateInsert1PageDef"/>
+    <page id="view_create_user_taskflow_create_user_taskflow_UpdateUserPageDef"
+          path="flows.create_user_taskflow_create_user_taskflow_UpdateUserPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AdminAppModuleDataControl" Package="model.AM"

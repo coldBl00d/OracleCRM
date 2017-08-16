@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="create-user-taskflow">
-    <default-activity>CreateUserStart</default-activity>
+    <default-activity>CreateInsert</default-activity>
     <data-control-scope>
       <shared/>
     </data-control-scope>
@@ -14,20 +14,40 @@
     <view id="CreateUserStart">
       <page>/CreateUserStart.jsff</page>
     </view>
-    <view id="view1"></view>
-    <view id="view2"></view>
+    <method-call id="CreateInsert">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>CreateInsert</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="CreateInsert1">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>CreateInsert</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="UpdateUser">
+      <method>#{bindings.UpdateUser.execute}</method>
+      <outcome>
+        <fixed-outcome>UpdateUser</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__2">
-      <from-activity-id>CreateUserStart</from-activity-id>
+      <from-activity-id>CreateInsert</from-activity-id>
       <control-flow-case id="__3">
-        <from-outcome>manager</from-outcome>
-        <to-activity-id>view1</to-activity-id>
+        <to-activity-id>CreateInsert1</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__4">
-        <to-activity-id>view2</to-activity-id>
-      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>CreateInsert1</from-activity-id>
       <control-flow-case id="__5">
-        <from-outcome>vp</from-outcome>
-        <to-activity-id>view1</to-activity-id>
+        <to-activity-id>CreateUserStart</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>CreateUserStart</from-activity-id>
+      <control-flow-case id="__7">
+        <to-activity-id>UpdateUser</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

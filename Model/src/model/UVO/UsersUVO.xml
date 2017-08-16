@@ -22,7 +22,8 @@
     PrecisionRule="true"
     EntityAttrName="UserId"
     EntityUsage="UsersEO"
-    AliasName="USER_ID"/>
+    AliasName="USER_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="UName"
     IsNotNull="true"
@@ -104,4 +105,8 @@
     ViewLink="model.UVO.UserRoleLinkFk1VL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <SortCriteria>
+    <Sort
+      Attribute="UserId"/>
+  </SortCriteria>
 </ViewObject>

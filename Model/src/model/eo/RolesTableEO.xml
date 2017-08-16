@@ -66,7 +66,7 @@
     Name="Users"
     Association="model.AM.UserRoleASSOC"
     AssociationEnd="model.AM.UserRoleASSOC.Users"
-    AssociationOtherEnd="model.AM.UserRoleASSOC.RolesTable"
+    AssociationOtherEnd="model.AM.UserRoleASSOC.RolesTableEO"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

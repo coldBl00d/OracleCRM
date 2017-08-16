@@ -1,0 +1,12 @@
+//Groovy Scripts for model.UVO.UserFormUVO
+
+package model.UVO
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="AddressId1")
+def AddressId1_ExpressionScript_Expression()
+{
+AddressId1=AddressId
+}
+

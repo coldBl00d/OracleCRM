@@ -29,17 +29,16 @@
     </AttrArray>
   </AssociationEnd>
   <AssociationEnd
-    Name="RolesTable"
+    Name="RolesTableEO"
     Cardinality="-1"
-    Owner="model.EO.RolesTableEO"
+    Owner="model.eo.RolesTableEO"
     IntersectEntity="model.eo.UserRoleLinkEO">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
-      <Attr Name="_finderName" Value="RolesTable"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.EO.RolesTableEO.Id"/>
+      <Item Value="model.eo.RolesTableEO.Id"/>
     </AttrArray>
     <AttrArray Name="IntersectAttributes">
       <Item Value="model.eo.UserRoleLinkEO.RoleId"/>

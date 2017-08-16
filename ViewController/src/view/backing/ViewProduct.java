@@ -21,7 +21,6 @@ public class ViewProduct {
     private RichGridRow gr2;
     private RichGridCell gc3;
     private RichGridCell gc4;
-    private RichTable t1;
     private RichPanelFormLayout pfl1;
     private RichInputText it1;
     private RichInputText it2;
@@ -37,6 +36,7 @@ public class ViewProduct {
     private RichGridRow gr3;
     private RichGridCell gc5;
     private RichSpacer s1;
+    private RichTable t1;
 
     public void setGc2(RichGridCell gc2) {
         this.gc2 = gc2;
@@ -70,13 +70,6 @@ public class ViewProduct {
         return gc4;
     }
 
-    public void setT1(RichTable t1) {
-        this.t1 = t1;
-    }
-
-    public RichTable getT1() {
-        return t1;
-    }
 
     public void setPfl1(RichPanelFormLayout pfl1) {
         this.pfl1 = pfl1;
@@ -196,5 +189,13 @@ public class ViewProduct {
 
     public RichSpacer getS1() {
         return s1;
+    }
+
+    public void setT1(RichTable t1) {
+        this.t1 = t1;
+    }
+
+    public RichTable getT1() {
+        return t1;
     }
 }

@@ -1,11 +1,133 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-    <af:panelSplitter orientation="horizontal" splitterPosition="100" positionedFromEnd="true" id="ps1">
-        <f:facet name="first">
-            <af:outputText value="Create User start page" id="ot1" binding="#{backingBeanScope.backing_CreateUserStart.ot1}"/>
-        </f:facet>
-        <f:facet name="second"/>
-    </af:panelSplitter>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_CreateUserStart-->
+    <af:panelBox text="PanelBox1" id="pb1" binding="#{backingBeanScope.backing_CreateUserStart.pb1}">
+        <f:facet name="toolbar"/>
+        <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_CreateUserStart.pgl1}">
+            <af:gridRow marginTop="5px" id="gr1" binding="#{backingBeanScope.backing_CreateUserStart.gr1}">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
+                             binding="#{backingBeanScope.backing_CreateUserStart.gc1}">
+                    <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_CreateUserStart.pfl1}">
+                        <af:inputText value="#{bindings.UName.inputValue}" label="#{bindings.UName.hints.label}"
+                                      required="#{bindings.UName.hints.mandatory}"
+                                      columns="#{bindings.UName.hints.displayWidth}"
+                                      maximumLength="#{bindings.UName.hints.precision}"
+                                      shortDesc="#{bindings.UName.hints.tooltip}" id="it1"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it1}">
+                            <f:validator binding="#{bindings.UName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.UPassword.inputValue}" label="#{bindings.UPassword.hints.label}"
+                                      required="#{bindings.UPassword.hints.mandatory}"
+                                      columns="#{bindings.UPassword.hints.displayWidth}"
+                                      maximumLength="#{bindings.UPassword.hints.precision}"
+                                      shortDesc="#{bindings.UPassword.hints.tooltip}" id="it2"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it2}">
+                            <f:validator binding="#{bindings.UPassword.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.UserRefId.inputValue}" label="#{bindings.UserRefId.hints.label}"
+                                      required="#{bindings.UserRefId.hints.mandatory}"
+                                      columns="#{bindings.UserRefId.hints.displayWidth}"
+                                      maximumLength="#{bindings.UserRefId.hints.precision}"
+                                      shortDesc="#{bindings.UserRefId.hints.tooltip}" id="it3"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it3}">
+                            <f:validator binding="#{bindings.UserRefId.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Gender.inputValue}" label="#{bindings.Gender.hints.label}"
+                                      required="#{bindings.Gender.hints.mandatory}"
+                                      columns="#{bindings.Gender.hints.displayWidth}"
+                                      maximumLength="#{bindings.Gender.hints.precision}"
+                                      shortDesc="#{bindings.Gender.hints.tooltip}" id="it4"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it4}">
+                            <f:validator binding="#{bindings.Gender.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Gender.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.FirstName.inputValue}" label="#{bindings.FirstName.hints.label}"
+                                      required="#{bindings.FirstName.hints.mandatory}"
+                                      columns="#{bindings.FirstName.hints.displayWidth}"
+                                      maximumLength="#{bindings.FirstName.hints.precision}"
+                                      shortDesc="#{bindings.FirstName.hints.tooltip}" id="it5"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it5}">
+                            <f:validator binding="#{bindings.FirstName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.MiddleName.inputValue}"
+                                      label="#{bindings.MiddleName.hints.label}"
+                                      required="#{bindings.MiddleName.hints.mandatory}"
+                                      columns="#{bindings.MiddleName.hints.displayWidth}"
+                                      maximumLength="#{bindings.MiddleName.hints.precision}"
+                                      shortDesc="#{bindings.MiddleName.hints.tooltip}" id="it6"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it6}">
+                            <f:validator binding="#{bindings.MiddleName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.LastName.inputValue}" label="#{bindings.LastName.hints.label}"
+                                      required="#{bindings.LastName.hints.mandatory}"
+                                      columns="#{bindings.LastName.hints.displayWidth}"
+                                      maximumLength="#{bindings.LastName.hints.precision}"
+                                      shortDesc="#{bindings.LastName.hints.tooltip}" id="it7"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it7}">
+                            <f:validator binding="#{bindings.LastName.validator}"/>
+                        </af:inputText>
+                        <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"
+                                      required="#{bindings.StartDate.hints.mandatory}"
+                                      columns="#{bindings.StartDate.hints.displayWidth}"
+                                      shortDesc="#{bindings.StartDate.hints.tooltip}" id="id1"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.id1}">
+                            <f:validator binding="#{bindings.StartDate.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.StartDate.format}"/>
+                        </af:inputDate>
+                        <af:inputDate value="#{bindings.EndDate.inputValue}" label="#{bindings.EndDate.hints.label}"
+                                      required="#{bindings.EndDate.hints.mandatory}"
+                                      columns="#{bindings.EndDate.hints.displayWidth}"
+                                      shortDesc="#{bindings.EndDate.hints.tooltip}" id="id2"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.id2}">
+                            <f:validator binding="#{bindings.EndDate.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.EndDate.format}"/>
+                        </af:inputDate>
+                    </af:panelFormLayout>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" marginBottom="5px" id="gr2"
+                        binding="#{backingBeanScope.backing_CreateUserStart.gr2}">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2"
+                             binding="#{backingBeanScope.backing_CreateUserStart.gc2}">
+                    <af:panelFormLayout id="pfl2" binding="#{backingBeanScope.backing_CreateUserStart.pfl2}">
+                        <af:inputText value="#{bindings.BuildingInfo.inputValue}"
+                                      label="#{bindings.BuildingInfo.hints.label}"
+                                      required="#{bindings.BuildingInfo.hints.mandatory}"
+                                      columns="#{bindings.BuildingInfo.hints.displayWidth}"
+                                      maximumLength="#{bindings.BuildingInfo.hints.precision}"
+                                      shortDesc="#{bindings.BuildingInfo.hints.tooltip}" id="it8"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it8}">
+                            <f:validator binding="#{bindings.BuildingInfo.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.StreetName.inputValue}"
+                                      label="#{bindings.StreetName.hints.label}"
+                                      required="#{bindings.StreetName.hints.mandatory}"
+                                      columns="#{bindings.StreetName.hints.displayWidth}"
+                                      maximumLength="#{bindings.StreetName.hints.precision}"
+                                      shortDesc="#{bindings.StreetName.hints.tooltip}" id="it9"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it9}">
+                            <f:validator binding="#{bindings.StreetName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Zipcode.inputValue}" label="#{bindings.Zipcode.hints.label}"
+                                      required="#{bindings.Zipcode.hints.mandatory}"
+                                      columns="#{bindings.Zipcode.hints.displayWidth}"
+                                      maximumLength="#{bindings.Zipcode.hints.precision}"
+                                      shortDesc="#{bindings.Zipcode.hints.tooltip}" id="it10"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it10}">
+                            <f:validator binding="#{bindings.Zipcode.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Zipcode.format}"/>
+                        </af:inputText>
+                    </af:panelFormLayout>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow id="gr3" binding="#{backingBeanScope.backing_CreateUserStart.gr3}">
+                <af:gridCell id="gc3" binding="#{backingBeanScope.backing_CreateUserStart.gc3}">
+                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                               disabled="#{!bindings.Commit.enabled}" id="b1"
+                               binding="#{backingBeanScope.backing_CreateUserStart.b1}"/>
+                </af:gridCell>
+            </af:gridRow>
+        </af:panelGridLayout>
+    </af:panelBox>
 </ui:composition>

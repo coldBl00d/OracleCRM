@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="CreateUserStartPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UsersU2" RangeSize="10" DataControl="AppModuleAMDataControl" id="UsersU2Iterator"/>
+    <iterator Binds="AddressU2" RangeSize="10" DataControl="AppModuleAMDataControl" id="AddressU2Iterator"/>
+    <iterator Binds="LocationU2" RangeSize="10" DataControl="AppModuleAMDataControl" id="LocationU2Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="UsersU2Iterator" id="UsersU2">
+      <nodeDefinition DefName="model.UVO.UsersUVO" Name="UsersU20">
+        <AttrNames>
+          <Item Value="UserId"/>
+          <Item Value="UName"/>
+          <Item Value="UPassword"/>
+          <Item Value="UserRefId"/>
+          <Item Value="StartDate"/>
+          <Item Value="SalesTeamId"/>
+          <Item Value="MiddleName"/>
+          <Item Value="LastName"/>
+          <Item Value="Gender"/>
+          <Item Value="FirstName"/>
+          <Item Value="EndDate"/>
+          <Item Value="AddressId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="AddressU2Iterator" id="AddressU2">
+      <nodeDefinition DefName="model.UVO.AddressUVO" Name="AddressU20">
+        <AttrNames>
+          <Item Value="AddressId"/>
+          <Item Value="BuildingInfo"/>
+          <Item Value="StreetName"/>
+          <Item Value="Zipcode"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="LocationU2Iterator" id="LocationU2">
+      <nodeDefinition DefName="model.UVO.LocationUVO" Name="LocationU20">
+        <AttrNames>
+          <Item Value="ZipCode"/>
+          <Item Value="City"/>
+          <Item Value="Country"/>
+          <Item Value="State"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="UsersU2Iterator" id="UName">
+      <AttrNames>
+        <Item Value="UName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU2Iterator" id="UPassword">
+      <AttrNames>
+        <Item Value="UPassword"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU2Iterator" id="UserRefId">
+      <AttrNames>
+        <Item Value="UserRefId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU2Iterator" id="Gender">
+      <AttrNames>
+        <Item Value="Gender"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU2Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU2Iterator" id="MiddleName">
+      <AttrNames>
+        <Item Value="MiddleName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU2Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU2Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UsersU2Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="BuildingInfo">
+      <AttrNames>
+        <Item Value="BuildingInfo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="StreetName">
+      <AttrNames>
+        <Item Value="StreetName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="Zipcode">
+      <AttrNames>
+        <Item Value="Zipcode"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+  </bindings>
+</pageDefinition>

@@ -17,7 +17,7 @@
                                   rowSelection="single" fetchSize="#{bindings.ProductsU1.rangeSize}"
                                   filterModel="#{bindings.ProductsU1Query.queryDescriptor}" filterVisible="true"
                                   queryListener="#{bindings.ProductsU1Query.processQuery}" varStatus="vs" id="t1"
-                                  binding="#{backingBeanScope.backing_ViewProduct.t1}" columnStretching="last">
+                                  binding="#{backingBeanScope.backing_ViewProduct.t1}">
                             <af:column sortProperty="#{bindings.ProductsU1.hints.ProductName.name}" filterable="true"
                                        sortable="true" headerText="#{bindings.ProductsU1.hints.ProductName.label}"
                                        id="c1">

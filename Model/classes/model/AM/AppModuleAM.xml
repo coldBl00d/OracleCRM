@@ -6,22 +6,18 @@
   Name="AppModuleAM"
   Version="12.2.1.12.24"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true">
+  ClearCacheOnRollback="true"
+  ComponentClass="model.AM.AppModuleAMImpl"
+  ComponentInterface="model.AM.common.AppModuleAM">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewUsage
     Name="RolesTableR1"
     ViewObjectName="model.rvo.RolesTableRVO"/>
   <ViewUsage
     Name="RolesTableU1"
     ViewObjectName="model.UVO.RolesTableUVO"/>
-  <ViewUsage
-    Name="LocationU1"
-    ViewObjectName="model.UVO.LocationUVO"/>
-  <ViewUsage
-    Name="AddressU1"
-    ViewObjectName="model.UVO.AddressUVO"/>
-  <ViewUsage
-    Name="UsersU1"
-    ViewObjectName="model.UVO.UsersUVO"/>
   <ViewUsage
     Name="CategoryTableU1"
     ViewObjectName="model.UVO.CategoryTableUVO"/>
@@ -31,16 +27,23 @@
   <ViewUsage
     Name="UserFormU1"
     ViewObjectName="model.UVO.UserFormUVO"/>
-  <ViewLinkUsage
-    Name="AddressFk1VL1"
-    ViewLinkObjectName="model.UVO.AddressFk1VL"
-    SrcViewUsageName="model.AM.AppModuleAM.LocationU1"
-    DstViewUsageName="model.AM.AppModuleAM.AddressU1"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="UsersFk1VL1"
-    ViewLinkObjectName="model.UVO.UsersFk1VL"
-    SrcViewUsageName="model.AM.AppModuleAM.AddressU1"
-    DstViewUsageName="model.AM.AppModuleAM.UsersU1"
-    Reversed="false"/>
+  <ViewUsage
+    Name="AddressU2"
+    ViewObjectName="model.UVO.AddressUVO"/>
+  <ViewUsage
+    Name="LocationU2"
+    ViewObjectName="model.UVO.LocationUVO"/>
+  <ViewUsage
+    Name="UsersU2"
+    ViewObjectName="model.UVO.UsersUVO"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="UpdateUser"
+      MethodName="UpdateUser">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+  </ClientInterface>
 </AppModule>

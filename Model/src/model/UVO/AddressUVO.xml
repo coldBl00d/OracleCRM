@@ -22,7 +22,8 @@
     PrecisionRule="true"
     EntityAttrName="AddressId"
     EntityUsage="AddressEO"
-    AliasName="ADDRESS_ID"/>
+    AliasName="ADDRESS_ID"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="BuildingInfo"
     IsNotNull="true"
@@ -48,4 +49,8 @@
     ViewLink="model.UVO.UsersFk1VL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <SortCriteria>
+    <Sort
+      Attribute="AddressId"/>
+  </SortCriteria>
 </ViewObject>

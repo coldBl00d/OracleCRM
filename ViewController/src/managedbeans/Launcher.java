@@ -34,6 +34,19 @@ public class Launcher {
           "/WEB-INF/flows/create-salesteam-taskflow.xml#create-salesteam-taskflow",  
           true); 
       } 
+    public void assignSalesTeam(ActionEvent actionEvent) 
+      { 
+        /** 
+        * Example method when called repeatedly, will open another instance as 
+        * oppose to selecting a previously opened tab instance. Note the boolean 
+        * to create another tab instance is set to true. 
+        */ 
+          
+        _launchActivity( 
+          "New User", 
+          "/WEB-INF/flows/assign-manager-taskflow.xml#assign-manager-taskflow",  
+          true); 
+      } 
     public void createProductActivity(ActionEvent actionEvent) 
       { 
         /** 

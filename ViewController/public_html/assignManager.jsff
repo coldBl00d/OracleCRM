@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGridLayout id="pgl1">
+        <af:gridRow height="90%" id="gr1">
+            <af:gridCell width="auto" halign="stretch" valign="stretch" id="gc1">
+                <!-- Content -->
+                <af:table value="#{bindings.AssignTeamU1.collectionModel}" var="row"
+                          rows="#{bindings.AssignTeamU1.rangeSize}"
+                          emptyText="#{bindings.AssignTeamU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.AssignTeamU1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.AssignTeamU1.collectionModel.makeCurrent}" rowSelection="single"
+                          fetchSize="#{bindings.AssignTeamU1.rangeSize}"
+                          filterModel="#{bindings.AssignTeamU1Query.queryDescriptor}" filterVisible="true"
+                          queryListener="#{bindings.AssignTeamU1Query.processQuery}" varStatus="vs" id="t1"
+                          binding="#{backingBeanScope.backing_assignManager.t1}" editingMode="clickToEdit">
+                    <af:column sortProperty="#{bindings.AssignTeamU1.hints.TeamName.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.AssignTeamU1.hints.TeamName.label}" id="c1">
+                        <af:inputText value="#{row.bindings.TeamName.inputValue}"
+                                      label="#{bindings.AssignTeamU1.hints.TeamName.label}"
+                                      required="#{bindings.AssignTeamU1.hints.TeamName.mandatory}"
+                                      columns="#{bindings.AssignTeamU1.hints.TeamName.displayWidth}"
+                                      maximumLength="#{bindings.AssignTeamU1.hints.TeamName.precision}"
+                                      shortDesc="#{bindings.AssignTeamU1.hints.TeamName.tooltip}" id="it1">
+                            <f:validator binding="#{row.bindings.TeamName.validator}"/>
+                        </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.AssignTeamU1.hints.ManagerId.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.AssignTeamU1.hints.ManagerId.label}" id="c2">
+                        <af:selectOneChoice value="#{row.bindings.ManagerId.inputValue}"
+                                            label="#{row.bindings.ManagerId.label}"
+                                            required="#{bindings.AssignTeamU1.hints.ManagerId.mandatory}"
+                                            shortDesc="#{bindings.AssignTeamU1.hints.ManagerId.tooltip}" id="soc1"
+                                            autoSubmit="true">
+                            <f:selectItems value="#{row.bindings.ManagerId.items}" id="si1"/>
+                            <f:validator binding="#{row.bindings.ManagerId.validator}"/>
+                        </af:selectOneChoice>
+                    </af:column>
+                </af:table>
+            </af:gridCell>
+        </af:gridRow>
+        <af:gridRow id="gr2" binding="#{backingBeanScope.backing_assignManager.gr2}">
+            <af:gridCell id="gc2" binding="#{backingBeanScope.backing_assignManager.gc2}">
+                <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                           disabled="#{!bindings.Commit.enabled}" id="b1"
+                           binding="#{backingBeanScope.backing_assignManager.b1}"/>
+                <af:spacer width="10" height="10" id="s1" binding="#{backingBeanScope.backing_assignManager.s1}"/>
+                <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
+                           disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b2"
+                           binding="#{backingBeanScope.backing_assignManager.b2}">
+                    <af:resetActionListener/>
+                </af:button>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_assignManager-->
+</ui:composition>

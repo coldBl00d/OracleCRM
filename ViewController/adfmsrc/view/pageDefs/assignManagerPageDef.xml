@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="assignManagerPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AssignTeamU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="AssignTeamU1Iterator"/>
+    <searchRegion Binds="AssignTeamU1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="AssignTeamU1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="AssignTeamU1Iterator" id="AssignTeamU1">
+      <nodeDefinition DefName="model.UVO.AssignTeamUVO" Name="AssignTeamU10">
+        <AttrNames>
+          <Item Value="TeamName"/>
+          <Item Value="ManagerId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction"
+            DataControl="AppModuleAMDataControl"/>
+  </bindings>
+</pageDefinition>

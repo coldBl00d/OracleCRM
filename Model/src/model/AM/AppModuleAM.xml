@@ -48,6 +48,9 @@
   <ViewUsage
     Name="SalesTeamU1"
     ViewObjectName="model.UVO.SalesTeamUVO"/>
+  <ViewUsage
+    Name="AssignTeamU1"
+    ViewObjectName="model.UVO.AssignTeamUVO"/>
   <ViewLinkUsage
     Name="UserRoleVL1"
     ViewLinkObjectName="model.UVO.UserRoleVL"

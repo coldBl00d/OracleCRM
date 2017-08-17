@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGridLayout id="pgl1">
+        <af:gridRow height="100%" id="gr1">
+            <af:gridCell width="60%" halign="stretch" valign="stretch" id="gc1">
+                <!-- Content -->
+                <af:panelHeader text="Users" id="ph1" binding="#{backingBeanScope.backing_assignRole.ph1}">
+                    <f:facet name="context"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="menuBar"/>
+                    <f:facet name="legend"/>
+                    <f:facet name="info"/>
+                    <af:table value="#{bindings.UsersU1.collectionModel}" var="row" rows="#{bindings.UsersU1.rangeSize}"
+                              emptyText="#{bindings.UsersU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0" selectedRowKeys="#{bindings.UsersU1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.UsersU1.collectionModel.makeCurrent}" rowSelection="single"
+                              fetchSize="#{bindings.UsersU1.rangeSize}"
+                              filterModel="#{bindings.UsersU1Query.queryDescriptor}" filterVisible="true"
+                              queryListener="#{bindings.UsersU1Query.processQuery}" varStatus="vs" id="t1"
+                              binding="#{backingBeanScope.backing_assignRole.t1}" columnStretching="last">
+                        <af:column sortProperty="#{bindings.UsersU1.hints.UserRefId.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.UsersU1.hints.UserRefId.label}" id="c1">
+                            <af:outputText value="#{row.UserRefId}"
+                                           shortDesc="#{bindings.UsersU1.hints.UserRefId.tooltip}" id="ot1"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.UsersU1.hints.FirstName.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.UsersU1.hints.FirstName.label}" id="c2">
+                            <af:outputText value="#{row.FirstName}"
+                                           shortDesc="#{bindings.UsersU1.hints.FirstName.tooltip}" id="ot2"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.UsersU1.hints.MiddleName.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.UsersU1.hints.MiddleName.label}" id="c3">
+                            <af:outputText value="#{row.MiddleName}"
+                                           shortDesc="#{bindings.UsersU1.hints.MiddleName.tooltip}" id="ot3"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.UsersU1.hints.LastName.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.UsersU1.hints.LastName.label}" id="c4">
+                            <af:outputText value="#{row.LastName}"
+                                           shortDesc="#{bindings.UsersU1.hints.LastName.tooltip}" id="ot4"/>
+                        </af:column>
+                    </af:table>
+                </af:panelHeader>
+            </af:gridCell>
+            <af:gridCell id="gc2" binding="#{backingBeanScope.backing_assignRole.gc2}" width="40%">
+                <af:panelHeader text="Roles" id="ph2" binding="#{backingBeanScope.backing_assignRole.ph2}"
+                                partialTriggers="t1">
+                    <f:facet name="context"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="menuBar"/>
+                    <f:facet name="legend"/>
+                    <f:facet name="info"/>
+                    <af:table value="#{bindings.AllUserRolePairU1.collectionModel}" var="row"
+                              rows="#{bindings.AllUserRolePairU1.rangeSize}"
+                              emptyText="#{bindings.AllUserRolePairU1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0" fetchSize="#{bindings.AllUserRolePairU1.rangeSize}" id="t2"
+                              binding="#{backingBeanScope.backing_assignRole.t2}">
+                        <af:column headerText="#{bindings.AllUserRolePairU1.hints.RoleName.label}" id="c5">
+                            <af:inputText value="#{row.bindings.RoleName.inputValue}"
+                                          label="#{bindings.AllUserRolePairU1.hints.RoleName.label}"
+                                          required="#{bindings.AllUserRolePairU1.hints.RoleName.mandatory}"
+                                          columns="#{bindings.AllUserRolePairU1.hints.RoleName.displayWidth}"
+                                          maximumLength="#{bindings.AllUserRolePairU1.hints.RoleName.precision}"
+                                          shortDesc="#{bindings.AllUserRolePairU1.hints.RoleName.tooltip}" id="it1">
+                                <f:validator binding="#{row.bindings.RoleName.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.AllUserRolePairU1.hints.AreAssociated.label}" id="c6">
+                            <af:selectBooleanCheckbox value="#{row.bindings.AreAssociated.inputValue}"
+                                                      label="#{row.bindings.AreAssociated.label}"
+                                                      shortDesc="#{bindings.AllUserRolePairU1.hints.AreAssociated.tooltip}"
+                                                      autoSubmit="true" id="sbc1"/>
+                        </af:column>
+                    </af:table>
+                </af:panelHeader>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_assignRole-->
+</ui:composition>

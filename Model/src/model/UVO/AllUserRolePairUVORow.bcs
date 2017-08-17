@@ -1,0 +1,12 @@
+//Groovy Scripts for model.UVO.AllUserRolePairUVO
+
+package model.UVO
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="AreAssociated")
+def AreAssociated_ExpressionScript_Expression()
+{
+UserRoleLinkUVO1.rowCount>0?true:false
+}
+

@@ -36,6 +36,21 @@
   <ViewUsage
     Name="UsersU2"
     ViewObjectName="model.UVO.UsersUVO"/>
+  <ViewUsage
+    Name="UsersU1"
+    ViewObjectName="model.UVO.UsersUVO"/>
+  <ViewUsage
+    Name="AllUserRolePairU1"
+    ViewObjectName="model.UVO.AllUserRolePairUVO"/>
+  <ViewUsage
+    Name="UserRoleLinkU1"
+    ViewObjectName="model.UVO.UserRoleLinkUVO"/>
+  <ViewLinkUsage
+    Name="UserRoleVL1"
+    ViewLinkObjectName="model.UVO.UserRoleVL"
+    SrcViewUsageName="model.AM.AppModuleAM.UsersU1"
+    DstViewUsageName="model.AM.AppModuleAM.AllUserRolePairU1"
+    Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
     <Method

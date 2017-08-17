@@ -13,6 +13,14 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <Variable
+    Name="Bind_UserId"
+    Kind="where"
+    Type="java.lang.Integer"/>
+  <Variable
+    Name="Bind_RoleId"
+    Kind="where"
+    Type="java.lang.Integer"/>
   <EntityUsage
     Name="UserRoleLinkEO"
     Entity="model.eo.UserRoleLinkEO"/>
@@ -30,4 +38,50 @@
     EntityAttrName="UserId"
     EntityUsage="UserRoleLinkEO"
     AliasName="USER_ID"/>
+  <ViewCriteria
+    Name="UserRoleLinkUVOCriteria"
+    ViewObjectName="model.UVO.UserRoleLinkUVO"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="UserRoleLinkUVOCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="UserRoleLinkUVOCriteria_UserRoleLinkUVOCriteria_row_0_RoleId"
+        ViewAttribute="RoleId"
+        Operator="="
+        Conjunction="AND"
+        Value=":Bind_RoleId"
+        GenerateIsNullClauseForBindVars="false"
+        IsBindVarValue="true"
+        Required="Optional"/>
+      <ViewCriteriaItem
+        Name="UserId"
+        ViewAttribute="UserId"
+        Operator="="
+        Conjunction="AND"
+        Value=":Bind_UserId"
+        GenerateIsNullClauseForBindVars="false"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
 </ViewObject>

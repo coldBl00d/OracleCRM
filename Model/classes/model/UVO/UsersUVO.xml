@@ -13,6 +13,27 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="GenderUVO1"
+    ViewObjectName="model.UVO.GenderUVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Gender"
+    ListVOName="GenderUVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Gender"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Value"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="UsersEO"
     Entity="model.eo.UsersEO"/>
@@ -70,7 +91,15 @@
     PrecisionRule="true"
     EntityAttrName="Gender"
     EntityUsage="UsersEO"
-    AliasName="GENDER"/>
+    AliasName="GENDER"
+    LOVName="LOV_Gender">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="SalesTeamId"
     PrecisionRule="true"
@@ -105,6 +134,15 @@
     ViewLink="model.UVO.UserRoleLinkFk1VL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AllUserRolePairU"
+    ViewLink="model.UVO.UserRoleVL"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <SortCriteria>
+    <Sort
+      Attribute="UserId"/>
+  </SortCriteria>
   <SortCriteria>
     <Sort
       Attribute="UserId"/>

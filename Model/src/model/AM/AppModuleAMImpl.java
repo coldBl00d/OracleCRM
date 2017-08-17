@@ -117,5 +117,37 @@ public class AppModuleAMImpl extends ApplicationModuleImpl implements AppModuleA
         
     }
 
+    /**
+     * Container's getter for UsersU1.
+     * @return UsersU1
+     */
+    public ViewObjectImpl getUsersU1() {
+        return (ViewObjectImpl) findViewObject("UsersU1");
+    }
+
+    /**
+     * Container's getter for AllUserRolePairU1.
+     * @return AllUserRolePairU1
+     */
+    public ViewObjectImpl getAllUserRolePairU1() {
+        return (ViewObjectImpl) findViewObject("AllUserRolePairU1");
+    }
+
+    /**
+     * Container's getter for UserRoleVL1.
+     * @return UserRoleVL1
+     */
+    public ViewLinkImpl getUserRoleVL1() {
+        return (ViewLinkImpl) findViewLink("UserRoleVL1");
+    }
+
+
+    /**
+     * Container's getter for UserRoleLinkU1.
+     * @return UserRoleLinkU1
+     */
+    public ViewObjectImpl getUserRoleLinkU1() {
+        return (ViewObjectImpl) findViewObject("UserRoleLinkU1");
+    }
 }
 

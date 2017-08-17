@@ -22,21 +22,6 @@
          name="exceptionHandler">false</property>
    </View>
    <MethodCall
-      id="MethodCall3">
-      <property
-         name="activityId">CreateInsert</property>
-      <property
-         name="x">221.01465</property>
-      <property
-         name="start">true</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="y">430.44824</property>
-      <property
-         name="exceptionHandler">false</property>
-   </MethodCall>
-   <MethodCall
       id="MethodCall4">
       <property
          name="activityId">CreateInsert1</property>
@@ -49,16 +34,6 @@
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase5"
-      from="MethodCall3"
-      to="MethodCall4">
-      <property
-         name="fromOutcome">*</property>
-      <property
-         name="sdm:polyPoints">T50,221.01465,376.09766,366.35156,283.39648,L50</property>
-   </ControlFlowCase>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase6"
@@ -90,6 +65,31 @@
       <property
          name="fromOutcome">*</property>
       <property
-         name="sdm:polyPoints">R40,L43</property>
+         name="sdm:polyPoints">R50,628.0,419.93652,796.0957,446.79883,L50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall9">
+      <property
+         name="activityId">CreateInsert2</property>
+      <property
+         name="x">384.35156</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert2&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">586.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="MethodCall9"
+      to="MethodCall4">
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="sdm:polyPoints">T50,384.35156,531.7988,403.85156,337.39648,B44</property>
    </ControlFlowCase>
 </SDM>

@@ -27,6 +27,9 @@ public class Users {
     private RichPanelList pl1;
     private RichLink l1;
     private RichLink l2;
+    private RichLink l3;
+    private RichLink l4;
+    private RichLink l5;
 
     public void setPt1(RichPageTemplate pt1) {
         this.pt1 = pt1;
@@ -141,4 +144,27 @@ public class Users {
     }
 
 
+    public void setL3(RichLink l3) {
+        this.l3 = l3;
+    }
+
+    public RichLink getL3() {
+        return l3;
+    }
+
+    public void setL4(RichLink l4) {
+        this.l4 = l4;
+    }
+
+    public RichLink getL4() {
+        return l4;
+    }
+
+    public void setL5(RichLink l5) {
+        this.l5 = l5;
+    }
+
+    public RichLink getL5() {
+        return l5;
+    }
 }

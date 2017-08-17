@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24"
-                id="create_user_taskflow_create_user_taskflow_CreateInsertPageDef" Package="flows"
+                id="create_user_taskflow_create_user_taskflow_CreateInsert2PageDef" Package="flows"
                 SkipValidation="true">
   <parameters/>
   <executables>

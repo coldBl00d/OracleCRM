@@ -47,6 +47,22 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="AddressU2Iterator" id="BuildingInfo">
+      <AttrNames>
+        <Item Value="BuildingInfo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="StreetName">
+      <AttrNames>
+        <Item Value="StreetName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressU2Iterator" id="Zipcode">
+      <AttrNames>
+        <Item Value="Zipcode"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
     <attributeValues IterBinding="UsersU2Iterator" id="UName">
       <AttrNames>
         <Item Value="UName"/>
@@ -62,11 +78,8 @@
         <Item Value="UserRefId"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="UsersU2Iterator" id="Gender">
-      <AttrNames>
-        <Item Value="Gender"/>
-      </AttrNames>
-    </attributeValues>
+    <list IterBinding="UsersU2Iterator" StaticList="false" Uses="LOV_Gender" id="Gender" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="UsersU2Iterator" id="FirstName">
       <AttrNames>
         <Item Value="FirstName"/>
@@ -92,21 +105,5 @@
         <Item Value="EndDate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="AddressU2Iterator" id="BuildingInfo">
-      <AttrNames>
-        <Item Value="BuildingInfo"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="AddressU2Iterator" id="StreetName">
-      <AttrNames>
-        <Item Value="StreetName"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="AddressU2Iterator" id="Zipcode">
-      <AttrNames>
-        <Item Value="Zipcode"/>
-      </AttrNames>
-    </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
   </bindings>
 </pageDefinition>

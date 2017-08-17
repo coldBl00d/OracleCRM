@@ -21,6 +21,10 @@
                                              actionListener="#{backingBeanScope.Launcher.createUserActivity}"/>
                                     <af:link text="View Users" id="l2" binding="#{backingBeanScope.backing_Users.l2}"
                                              actionListener="#{backingBeanScope.Launcher.ViewUserActivity}"/>
+                                    <af:link text="Create Sales Team" id="l3" binding="#{backingBeanScope.backing_Users.l3}"/>
+                                    <af:link text="Assign Sales Team" id="l4" binding="#{backingBeanScope.backing_Users.l4}"/>
+                                    <af:link text="Assign Roles" id="l5" binding="#{backingBeanScope.backing_Users.l5}"
+                                             actionListener="#{backingBeanScope.Launcher.assignRoleActivity}"/>
                                 </af:panelList>
                             </af:panelGroupLayout>
                         </f:facet>

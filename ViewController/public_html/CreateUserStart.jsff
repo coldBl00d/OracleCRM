@@ -33,21 +33,20 @@
                                       binding="#{backingBeanScope.backing_CreateUserStart.it3}">
                             <f:validator binding="#{bindings.UserRefId.validator}"/>
                         </af:inputText>
-                        <af:inputText value="#{bindings.Gender.inputValue}" label="#{bindings.Gender.hints.label}"
-                                      required="#{bindings.Gender.hints.mandatory}"
-                                      columns="#{bindings.Gender.hints.displayWidth}"
-                                      maximumLength="#{bindings.Gender.hints.precision}"
-                                      shortDesc="#{bindings.Gender.hints.tooltip}" id="it4"
-                                      binding="#{backingBeanScope.backing_CreateUserStart.it4}">
+                        <af:selectOneChoice value="#{bindings.Gender.inputValue}" label="#{bindings.Gender.label}"
+                                            required="#{bindings.Gender.hints.mandatory}"
+                                            shortDesc="#{bindings.Gender.hints.tooltip}" id="soc1"
+                                            binding="#{backingBeanScope.backing_CreateUserStart.soc1}">
+                            <f:selectItems value="#{bindings.Gender.items}" id="si1"
+                                           binding="#{backingBeanScope.backing_CreateUserStart.si1}"/>
                             <f:validator binding="#{bindings.Gender.validator}"/>
-                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Gender.format}"/>
-                        </af:inputText>
+                        </af:selectOneChoice>
                         <af:inputText value="#{bindings.FirstName.inputValue}" label="#{bindings.FirstName.hints.label}"
                                       required="#{bindings.FirstName.hints.mandatory}"
                                       columns="#{bindings.FirstName.hints.displayWidth}"
                                       maximumLength="#{bindings.FirstName.hints.precision}"
-                                      shortDesc="#{bindings.FirstName.hints.tooltip}" id="it5"
-                                      binding="#{backingBeanScope.backing_CreateUserStart.it5}">
+                                      shortDesc="#{bindings.FirstName.hints.tooltip}" id="it4"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it4}">
                             <f:validator binding="#{bindings.FirstName.validator}"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.MiddleName.inputValue}"
@@ -55,16 +54,16 @@
                                       required="#{bindings.MiddleName.hints.mandatory}"
                                       columns="#{bindings.MiddleName.hints.displayWidth}"
                                       maximumLength="#{bindings.MiddleName.hints.precision}"
-                                      shortDesc="#{bindings.MiddleName.hints.tooltip}" id="it6"
-                                      binding="#{backingBeanScope.backing_CreateUserStart.it6}">
+                                      shortDesc="#{bindings.MiddleName.hints.tooltip}" id="it5"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it5}">
                             <f:validator binding="#{bindings.MiddleName.validator}"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.LastName.inputValue}" label="#{bindings.LastName.hints.label}"
                                       required="#{bindings.LastName.hints.mandatory}"
                                       columns="#{bindings.LastName.hints.displayWidth}"
                                       maximumLength="#{bindings.LastName.hints.precision}"
-                                      shortDesc="#{bindings.LastName.hints.tooltip}" id="it7"
-                                      binding="#{backingBeanScope.backing_CreateUserStart.it7}">
+                                      shortDesc="#{bindings.LastName.hints.tooltip}" id="it6"
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it6}">
                             <f:validator binding="#{bindings.LastName.validator}"/>
                         </af:inputText>
                         <af:inputDate value="#{bindings.StartDate.inputValue}" label="#{bindings.StartDate.hints.label}"

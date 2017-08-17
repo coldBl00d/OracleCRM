@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="assignRolePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UsersU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="UsersU1Iterator"/>
+    <searchRegion Binds="UsersU1Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="UsersU1Query"/>
+    <iterator Binds="AllUserRolePairU1" RangeSize="25" DataControl="AppModuleAMDataControl"
+              id="AllUserRolePairU1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="UsersU1Iterator" id="UsersU1">
+      <nodeDefinition DefName="model.UVO.UsersUVO" Name="UsersU10">
+        <AttrNames>
+          <Item Value="UserRefId"/>
+          <Item Value="FirstName"/>
+          <Item Value="MiddleName"/>
+          <Item Value="LastName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="AllUserRolePairU1Iterator" id="AllUserRolePairU1">
+      <nodeDefinition DefName="model.UVO.AllUserRolePairUVO" Name="AllUserRolePairU10">
+        <AttrNames>
+          <Item Value="RoleName"/>
+          <Item Value="AreAssociated"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <button IterBinding="AllUserRolePairU1Iterator" id="AreAssociated" DTSupportsMRU="false">
+      <AttrNames>
+        <Item Value="AreAssociated"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="true"/>
+        <Item Value="false"/>
+      </ValueList>
+    </button>
+  </bindings>
+</pageDefinition>

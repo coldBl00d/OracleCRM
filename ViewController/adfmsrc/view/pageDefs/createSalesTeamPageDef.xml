@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="createSalesTeamPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SalesTeamU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="SalesTeamU1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="SalesTeamU1Iterator" id="TeamId">
+      <AttrNames>
+        <Item Value="TeamId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SalesTeamU1Iterator" id="TeamName">
+      <AttrNames>
+        <Item Value="TeamName"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleAMDataControl"/>
+  </bindings>
+</pageDefinition>

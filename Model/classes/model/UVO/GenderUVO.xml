@@ -30,7 +30,7 @@ WHERE
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
-    Type="java.math.BigDecimal"
+    Type="java.lang.Long"
     ColumnType="NUMBER"
     AliasName="ID"
     Expression="ID"

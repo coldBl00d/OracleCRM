@@ -33,6 +33,9 @@
     <page path="/assignRole.jsff" usageId="view_assignRolePageDef"/>
     <page path="/WEB-INF/flows/create-user-taskflow.xml#create-user-taskflow@CreateInsert2"
           usageId="view_create_user_taskflow_create_user_taskflow_CreateInsert2PageDef"/>
+    <page path="/createSalesTeam.jsff" usageId="view_createSalesTeamPageDef"/>
+    <page path="/WEB-INF/flows/create-salesteam-taskflow.xml#create-salesteam-taskflow@CreateInsert"
+          usageId="view_create_salesteam_taskflow_create_salesteam_taskflow_CreateInsertPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled2PageDef" path="view.pageDefs.untitled2PageDef"/>
@@ -61,6 +64,9 @@
     <page id="view_assignRolePageDef" path="view.pageDefs.assignRolePageDef"/>
     <page id="view_create_user_taskflow_create_user_taskflow_CreateInsert2PageDef"
           path="flows.create_user_taskflow_create_user_taskflow_CreateInsert2PageDef"/>
+    <page id="view_createSalesTeamPageDef" path="view.pageDefs.createSalesTeamPageDef"/>
+    <page id="view_create_salesteam_taskflow_create_salesteam_taskflow_CreateInsertPageDef"
+          path="flows.create_salesteam_taskflow_create_salesteam_taskflow_CreateInsertPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AdminAppModuleDataControl" Package="model.AM"

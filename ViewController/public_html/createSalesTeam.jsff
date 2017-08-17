@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGridLayout id="pgl1">
+        <af:gridRow height="100%" id="gr1">
+            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                <!-- Content -->
+                <af:decorativeBox id="db1" binding="#{backingBeanScope.backing_createSalesTeam.db1}">
+                    <f:facet name="center">
+                        <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_createSalesTeam.pfl1}">
+                            <af:inputText value="#{bindings.TeamId.inputValue}" label="#{bindings.TeamId.hints.label}"
+                                          required="#{bindings.TeamId.hints.mandatory}"
+                                          columns="#{bindings.TeamId.hints.displayWidth}"
+                                          maximumLength="#{bindings.TeamId.hints.precision}"
+                                          shortDesc="#{bindings.TeamId.hints.tooltip}" id="it1"
+                                          binding="#{backingBeanScope.backing_createSalesTeam.it1}">
+                                <f:validator binding="#{bindings.TeamId.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.TeamId.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.TeamName.inputValue}"
+                                          label="#{bindings.TeamName.hints.label}"
+                                          required="#{bindings.TeamName.hints.mandatory}"
+                                          columns="#{bindings.TeamName.hints.displayWidth}"
+                                          maximumLength="#{bindings.TeamName.hints.precision}"
+                                          shortDesc="#{bindings.TeamName.hints.tooltip}" id="it2"
+                                          binding="#{backingBeanScope.backing_createSalesTeam.it2}">
+                                <f:validator binding="#{bindings.TeamName.validator}"/>
+                            </af:inputText>
+                            <f:facet name="footer">
+                                <af:button text="Submit" id="b1"
+                                           binding="#{backingBeanScope.backing_createSalesTeam.b1}"
+                                           actionListener="#{bindings.Commit.execute}"
+                                           disabled="#{!bindings.Commit.enabled}"/>
+                            </f:facet>
+                        </af:panelFormLayout>
+                    </f:facet>
+                </af:decorativeBox>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_createSalesTeam-->
+</ui:composition>

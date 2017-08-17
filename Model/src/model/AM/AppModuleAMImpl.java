@@ -149,5 +149,13 @@ public class AppModuleAMImpl extends ApplicationModuleImpl implements AppModuleA
     public ViewObjectImpl getUserRoleLinkU1() {
         return (ViewObjectImpl) findViewObject("UserRoleLinkU1");
     }
+
+    /**
+     * Container's getter for SalesTeamU1.
+     * @return SalesTeamU1
+     */
+    public ViewObjectImpl getSalesTeamU1() {
+        return (ViewObjectImpl) findViewObject("SalesTeamU1");
+    }
 }
 

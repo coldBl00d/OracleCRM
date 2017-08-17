@@ -23,7 +23,6 @@
     PrimaryKey="true"/>
   <Attribute
     Name="ManagerId"
-    IsNotNull="true"
     Precision="18"
     Scale="0"
     ColumnName="MANAGER_ID"

@@ -1,6 +1,7 @@
 package view.backing;
 
 import oracle.adf.view.rich.component.rich.input.RichInputText;
+import oracle.adf.view.rich.component.rich.layout.RichDecorativeBox;
 import oracle.adf.view.rich.component.rich.layout.RichGridCell;
 import oracle.adf.view.rich.component.rich.layout.RichGridRow;
 import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
@@ -19,6 +20,7 @@ public class CreateCategory {
     private RichInputText it2;
     private RichInputText it3;
     private RichButton b1;
+    private RichDecorativeBox db1;
 
     public void setPgl1(RichPanelGridLayout pgl1) {
         this.pgl1 = pgl1;
@@ -82,5 +84,14 @@ public class CreateCategory {
 
     public RichButton getB1() {
         return b1;
+    }
+
+
+    public void setDb1(RichDecorativeBox db1) {
+        this.db1 = db1;
+    }
+
+    public RichDecorativeBox getDb1() {
+        return db1;
     }
 }

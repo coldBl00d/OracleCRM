@@ -2,6 +2,7 @@ package view.backing;
 
 import oracle.adf.view.rich.component.rich.input.RichInputDate;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
+import oracle.adf.view.rich.component.rich.layout.RichDecorativeBox;
 import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
 
@@ -15,6 +16,7 @@ public class Createrole {
     private RichInputDate id1;
     private RichInputDate id2;
     private RichButton b1;
+    private RichDecorativeBox db1;
 
     public void setPfl1(RichPanelFormLayout pfl1) {
         this.pfl1 = pfl1;
@@ -62,5 +64,13 @@ public class Createrole {
 
     public RichButton getB1() {
         return b1;
+    }
+
+    public void setDb1(RichDecorativeBox db1) {
+        this.db1 = db1;
+    }
+
+    public RichDecorativeBox getDb1() {
+        return db1;
     }
 }

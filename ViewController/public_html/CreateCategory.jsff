@@ -2,45 +2,51 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_CreateCategory-->
-    <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_CreateCategory.pgl1}">
-        <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="gr1"
-                    binding="#{backingBeanScope.backing_CreateCategory.gr1}">
-            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
-                         binding="#{backingBeanScope.backing_CreateCategory.gc1}">
-                <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_CreateCategory.pfl1}">
-                    <af:inputText value="#{bindings.CategoryId.inputValue}" label="#{bindings.CategoryId.hints.label}"
-                                  required="#{bindings.CategoryId.hints.mandatory}"
-                                  columns="#{bindings.CategoryId.hints.displayWidth}"
-                                  maximumLength="#{bindings.CategoryId.hints.precision}"
-                                  shortDesc="#{bindings.CategoryId.hints.tooltip}" id="it1"
-                                  binding="#{backingBeanScope.backing_CreateCategory.it1}">
-                        <f:validator binding="#{bindings.CategoryId.validator}"/>
-                        <af:convertNumber groupingUsed="false" pattern="#{bindings.CategoryId.format}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.CategoryName.inputValue}"
-                                  label="#{bindings.CategoryName.hints.label}"
-                                  required="#{bindings.CategoryName.hints.mandatory}"
-                                  columns="#{bindings.CategoryName.hints.displayWidth}"
-                                  maximumLength="#{bindings.CategoryName.hints.precision}"
-                                  shortDesc="#{bindings.CategoryName.hints.tooltip}" id="it2"
-                                  binding="#{backingBeanScope.backing_CreateCategory.it2}">
-                        <f:validator binding="#{bindings.CategoryName.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.CategoryDescription.inputValue}"
-                                  label="#{bindings.CategoryDescription.hints.label}"
-                                  required="#{bindings.CategoryDescription.hints.mandatory}"
-                                  columns="#{bindings.CategoryDescription.hints.displayWidth}"
-                                  maximumLength="#{bindings.CategoryDescription.hints.precision}"
-                                  shortDesc="#{bindings.CategoryDescription.hints.tooltip}" id="it3"
-                                  binding="#{backingBeanScope.backing_CreateCategory.it3}">
-                        <f:validator binding="#{bindings.CategoryDescription.validator}"/>
-                    </af:inputText>
-                    <f:facet name="footer">
-                        <af:button text="Submit" id="b1" binding="#{backingBeanScope.backing_CreateCategory.b1}"
-                                   actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}"/>
-                    </f:facet>
-                </af:panelFormLayout>
-            </af:gridCell>
-        </af:gridRow>
-    </af:panelGridLayout>
+    <af:decorativeBox id="db1" binding="#{backingBeanScope.backing_CreateCategory.db1}">
+        <f:facet name="center">
+            <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_CreateCategory.pgl1}">
+                <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="gr1"
+                            binding="#{backingBeanScope.backing_CreateCategory.gr1}">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
+                                 binding="#{backingBeanScope.backing_CreateCategory.gc1}">
+                        <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_CreateCategory.pfl1}">
+                            <af:inputText value="#{bindings.CategoryId.inputValue}"
+                                          label="#{bindings.CategoryId.hints.label}"
+                                          required="#{bindings.CategoryId.hints.mandatory}"
+                                          columns="#{bindings.CategoryId.hints.displayWidth}"
+                                          maximumLength="#{bindings.CategoryId.hints.precision}"
+                                          shortDesc="#{bindings.CategoryId.hints.tooltip}" id="it1"
+                                          binding="#{backingBeanScope.backing_CreateCategory.it1}">
+                                <f:validator binding="#{bindings.CategoryId.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.CategoryId.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.CategoryName.inputValue}"
+                                          label="#{bindings.CategoryName.hints.label}"
+                                          required="#{bindings.CategoryName.hints.mandatory}"
+                                          columns="#{bindings.CategoryName.hints.displayWidth}"
+                                          maximumLength="#{bindings.CategoryName.hints.precision}"
+                                          shortDesc="#{bindings.CategoryName.hints.tooltip}" id="it2"
+                                          binding="#{backingBeanScope.backing_CreateCategory.it2}">
+                                <f:validator binding="#{bindings.CategoryName.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.CategoryDescription.inputValue}"
+                                          label="#{bindings.CategoryDescription.hints.label}"
+                                          required="#{bindings.CategoryDescription.hints.mandatory}"
+                                          columns="#{bindings.CategoryDescription.hints.displayWidth}"
+                                          maximumLength="#{bindings.CategoryDescription.hints.precision}"
+                                          shortDesc="#{bindings.CategoryDescription.hints.tooltip}" id="it3"
+                                          binding="#{backingBeanScope.backing_CreateCategory.it3}">
+                                <f:validator binding="#{bindings.CategoryDescription.validator}"/>
+                            </af:inputText>
+                            <f:facet name="footer">
+                                <af:button text="Submit" id="b1" binding="#{backingBeanScope.backing_CreateCategory.b1}"
+                                           actionListener="#{bindings.Commit.execute}"
+                                           disabled="#{!bindings.Commit.enabled}"/>
+                            </f:facet>
+                        </af:panelFormLayout>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
+    </af:decorativeBox>
 </ui:composition>

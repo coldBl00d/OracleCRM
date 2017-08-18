@@ -57,5 +57,17 @@
          <Tester FullProxyInterfaceName="model.AM.common.AppModuleAM"/>
          <Custom ns0:LastUsedConfiguration="AppModuleAMLocal" ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
       </AppModuleConfig>
+      <AppModuleConfig name="15DF3676D57" JDBCName="OracleCRMConnection" DeployPlatform="LOCAL" jbo.project="model.Model" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="AppModuleAMLocal" ApplicationName="model.AM.AppModuleAM" DBconnection="java:comp/env/jdbc/OracleCRMConnectionDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/OracleCRMConnectionDS" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="model.AM.AppModuleAM"/>
+         <Tester FullProxyInterfaceName="model.AM.common.AppModuleAM"/>
+         <Custom ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="15DF3750B69" JDBCName="OracleCRMConnection" DeployPlatform="LOCAL" jbo.project="model.Model" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="AppModuleAMLocal" ApplicationName="model.AM.AppModuleAM" DBconnection="java:comp/env/jdbc/OracleCRMConnectionDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/OracleCRMConnectionDS" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="model.AM.AppModuleAM"/>
+         <Tester FullProxyInterfaceName="model.AM.common.AppModuleAM"/>
+         <Custom ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
    </AppModuleConfigBag>
 </BC4JConfig>

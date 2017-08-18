@@ -28,6 +28,10 @@
     Name="ManagerUVO1"
     ViewObjectName="model.UVO.ManagerUVO"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="UsersUVO1"
+    ViewObjectName="model.UVO.UsersUVO"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_ManagerId"
     ListVOName="ManagerUVO1"

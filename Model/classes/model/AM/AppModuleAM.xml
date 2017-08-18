@@ -51,6 +51,9 @@
   <ViewUsage
     Name="AssignTeamU1"
     ViewObjectName="model.UVO.AssignTeamUVO"/>
+  <ViewUsage
+    Name="ViewUserU1"
+    ViewObjectName="model.UVO.ViewUserUVO"/>
   <ViewLinkUsage
     Name="UserRoleVL1"
     ViewLinkObjectName="model.UVO.UserRoleVL"

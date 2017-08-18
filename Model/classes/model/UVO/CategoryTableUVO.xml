@@ -29,16 +29,34 @@
     PrecisionRule="true"
     EntityAttrName="CategoryName"
     EntityUsage="CategoryTableEO"
-    AliasName="CATEGORY_NAME"/>
+    AliasName="CATEGORY_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.UVO.CategoryTableUVO.CategoryName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CategoryDescription"
     PrecisionRule="true"
     EntityAttrName="CategoryDescription"
     EntityUsage="CategoryTableEO"
-    AliasName="CATEGORY_DESCRIPTION"/>
+    AliasName="CATEGORY_DESCRIPTION">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.UVO.CategoryTableUVO.CategoryDescription_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="ProductsU"
     ViewLink="model.UVO.ProductsFk1VL"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

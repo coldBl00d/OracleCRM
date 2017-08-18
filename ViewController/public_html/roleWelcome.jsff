@@ -4,7 +4,6 @@
         <af:gridRow height="100%" id="gr1">
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
                 <!-- Content -->
-                <af:outputText value="role welcome" id="ot1" binding="#{backingBeanScope.backing_roleWelcome.ot1}"/>
             </af:gridCell>
         </af:gridRow>
     </af:panelGridLayout>

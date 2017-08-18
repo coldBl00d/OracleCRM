@@ -9,7 +9,7 @@
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
                         <!-- Content -->
                         <af:panelSplitter id="ps1" binding="#{backingBeanScope.backing_ViewCategory.ps1}"
-                                          splitterPosition="738">
+                                          splitterPosition="686">
                             <f:facet name="first">
                                 <af:table value="#{bindings.CategoryTableU1.collectionModel}" var="row"
                                           rows="#{bindings.CategoryTableU1.rangeSize}"

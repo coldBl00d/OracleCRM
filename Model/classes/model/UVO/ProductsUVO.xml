@@ -51,20 +51,41 @@
     PrecisionRule="true"
     EntityAttrName="ProductName"
     EntityUsage="ProductsEO"
-    AliasName="PRODUCT_NAME"/>
+    AliasName="PRODUCT_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.UVO.ProductsUVO.ProductName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ProductDescription"
     PrecisionRule="true"
     EntityAttrName="ProductDescription"
     EntityUsage="ProductsEO"
-    AliasName="PRODUCT_DESCRIPTION"/>
+    AliasName="PRODUCT_DESCRIPTION">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.UVO.ProductsUVO.ProductDescription_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ProductPrice"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="ProductPrice"
     EntityUsage="ProductsEO"
-    AliasName="PRODUCT_PRICE"/>
+    AliasName="PRODUCT_PRICE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.UVO.ProductsUVO.ProductPrice_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ProductCategory"
     PrecisionRule="true"
@@ -76,7 +97,13 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="model.UVO.ProductsUVO.ProductCategory_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

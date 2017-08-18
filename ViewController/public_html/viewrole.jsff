@@ -7,9 +7,10 @@
             <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_viewrole.pgl1}">
                 <af:gridRow marginTop="5px" height="90%" marginBottom="5px" id="gr1"
                             binding="#{backingBeanScope.backing_viewrole.gr1}">
-                    <af:gridCell marginStart="5px" width="65%" id="gc1"
+                    <af:gridCell marginStart="5px" width="60%" id="gc1"
                                  binding="#{backingBeanScope.backing_viewrole.gc1}"
-                                 inlineStyle="padding-bottom:20px; padding-left:20px; padding-right:20px; padding-top:20px;">
+                                 inlineStyle="padding-bottom:20px; padding-left:20px; padding-right:20px; padding-top:20px;"
+                                 halign="start">
                         <af:table value="#{bindings.RolesTableU1.collectionModel}" var="row"
                                   rows="#{bindings.RolesTableU1.rangeSize}"
                                   emptyText="#{bindings.RolesTableU1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -19,17 +20,17 @@
                                   rowSelection="single" fetchSize="#{bindings.RolesTableU1.rangeSize}"
                                   filterModel="#{bindings.RolesTableU1Query.queryDescriptor}" filterVisible="true"
                                   queryListener="#{bindings.RolesTableU1Query.processQuery}" varStatus="vs" id="t1"
-                                  binding="#{backingBeanScope.backing_viewrole.t1}" columnStretching="last"
-                                  partialTriggers="::b6 ::b3">
+                                  binding="#{backingBeanScope.backing_viewrole.t1}"
+                                  partialTriggers="::b6 ::b3" width="500" columnStretching="last">
                             <af:column sortProperty="#{bindings.RolesTableU1.hints.RoleName.name}" filterable="true"
                                        sortable="true" headerText="#{bindings.RolesTableU1.hints.RoleName.label}"
-                                       id="c1">
+                                       id="c1" width="100">
                                 <af:outputText value="#{row.RoleName}"
                                                shortDesc="#{bindings.RolesTableU1.hints.RoleName.tooltip}" id="ot1"/>
                             </af:column>
                             <af:column sortProperty="#{bindings.RolesTableU1.hints.StartDate.name}" filterable="true"
                                        sortable="true" headerText="#{bindings.RolesTableU1.hints.StartDate.label}"
-                                       id="c2">
+                                       id="c2" width="100">
                                 <f:facet name="filter">
                                     <af:inputDate value="#{bindings.RolesTableU1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.StartDate.value}"
                                                   id="id1" binding="#{backingBeanScope.backing_viewrole.id1}">
@@ -43,7 +44,7 @@
                             </af:column>
                             <af:column sortProperty="#{bindings.RolesTableU1.hints.EndDate.name}" filterable="true"
                                        sortable="true" headerText="#{bindings.RolesTableU1.hints.EndDate.label}"
-                                       id="c3">
+                                       id="c3" width="47">
                                 <f:facet name="filter">
                                     <af:inputDate value="#{bindings.RolesTableU1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.EndDate.value}"
                                                   id="id2" binding="#{backingBeanScope.backing_viewrole.id2}">
@@ -57,7 +58,7 @@
                             </af:column>
                         </af:table>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="35%" marginEnd="5px" id="gc2"
+                    <af:gridCell marginStart="5px" width="40%" marginEnd="5px" id="gc2"
                                  binding="#{backingBeanScope.backing_viewrole.gc2}">
                         <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_viewrole.pfl1}">
                             <af:inputText value="#{bindings.RoleName.inputValue}"
@@ -66,7 +67,7 @@
                                           columns="#{bindings.RoleName.hints.displayWidth}"
                                           maximumLength="#{bindings.RoleName.hints.precision}"
                                           shortDesc="#{bindings.RoleName.hints.tooltip}" id="it1"
-                                          binding="#{backingBeanScope.backing_viewrole.it1}">
+                                          binding="#{backingBeanScope.backing_viewrole.it1}" wrap="hard">
                                 <f:validator binding="#{bindings.RoleName.validator}"/>
                             </af:inputText>
                             <af:inputText value="#{bindings.RoleDescription.inputValue}"
@@ -75,7 +76,7 @@
                                           columns="#{bindings.RoleDescription.hints.displayWidth}"
                                           maximumLength="#{bindings.RoleDescription.hints.precision}"
                                           shortDesc="#{bindings.RoleDescription.hints.tooltip}" id="it2"
-                                          binding="#{backingBeanScope.backing_viewrole.it2}" rows="5">
+                                          binding="#{backingBeanScope.backing_viewrole.it2}" rows="5" wrap="hard">
                                 <f:validator binding="#{bindings.RoleDescription.validator}"/>
                             </af:inputText>
                             <af:inputDate value="#{bindings.StartDate.inputValue}"

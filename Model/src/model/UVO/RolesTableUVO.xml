@@ -27,7 +27,14 @@
     PrecisionRule="true"
     EntityAttrName="EndDate"
     EntityUsage="RolesTableEO"
-    AliasName="END_DATE"/>
+    AliasName="END_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.UVO.RolesTableUVO.EndDate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Id"
     IsNotNull="true"
@@ -41,21 +48,42 @@
     PrecisionRule="true"
     EntityAttrName="RoleDescription"
     EntityUsage="RolesTableEO"
-    AliasName="ROLE_DESCRIPTION"/>
+    AliasName="ROLE_DESCRIPTION">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.UVO.RolesTableUVO.RoleDescription_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="RoleName"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="RoleName"
     EntityUsage="RolesTableEO"
-    AliasName="ROLE_NAME"/>
+    AliasName="ROLE_NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.UVO.RolesTableUVO.RoleName_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="StartDate"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="StartDate"
     EntityUsage="RolesTableEO"
-    AliasName="START_DATE"/>
+    AliasName="START_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="model.UVO.RolesTableUVO.StartDate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

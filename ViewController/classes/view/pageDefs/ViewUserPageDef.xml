@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="ViewUserPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ViewUserU1" RangeSize="25" DataControl="AppModuleAMDataControl" id="ViewUserU1Iterator"/>
+    <searchRegion Binds="ViewUserU1Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="ViewUserU1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ViewUserU1Iterator" id="ViewUserU1">
+      <nodeDefinition DefName="model.UVO.ViewUserUVO" Name="ViewUserU10">
+        <AttrNames>
+          <Item Value="UserRefId"/>
+          <Item Value="FirstName"/>
+          <Item Value="MiddleName"/>
+          <Item Value="LastName"/>
+          <Item Value="StartDate"/>
+          <Item Value="EndDate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="UName">
+      <AttrNames>
+        <Item Value="UName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="UPassword">
+      <AttrNames>
+        <Item Value="UPassword"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="UserRefId">
+      <AttrNames>
+        <Item Value="UserRefId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="Gender">
+      <AttrNames>
+        <Item Value="Gender"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="FirstName">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="MiddleName">
+      <AttrNames>
+        <Item Value="MiddleName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="LastName">
+      <AttrNames>
+        <Item Value="LastName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="StartDate">
+      <AttrNames>
+        <Item Value="StartDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="EndDate">
+      <AttrNames>
+        <Item Value="EndDate"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="ViewUserU1Iterator" StaticList="false" Uses="LOV_SalesTeamId" id="SalesTeamId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="BuildingInfo">
+      <AttrNames>
+        <Item Value="BuildingInfo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="StreetName">
+      <AttrNames>
+        <Item Value="StreetName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="Zipcode">
+      <AttrNames>
+        <Item Value="Zipcode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="City">
+      <AttrNames>
+        <Item Value="City"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="State">
+      <AttrNames>
+        <Item Value="State"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ViewUserU1Iterator" id="Country">
+      <AttrNames>
+        <Item Value="Country"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="ViewUserU1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="ViewUserU1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

@@ -20,9 +20,9 @@
         <fixed-outcome>CreateInsert</fixed-outcome>
       </outcome>
     </method-call>
-    <control-flow-rule id="__2">
+    <control-flow-rule id="__10">
       <from-activity-id>CreateInsert</from-activity-id>
-      <control-flow-case id="__3">
+      <control-flow-case id="__11">
         <to-activity-id>createrole</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

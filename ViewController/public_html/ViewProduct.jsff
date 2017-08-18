@@ -99,13 +99,13 @@
                         <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
                                    disabled="#{!bindings.Commit.enabled}" id="b2"
                                    binding="#{backingBeanScope.backing_ViewProduct.b2}"/>
+                        <af:spacer width="10" height="10" id="s2" binding="#{backingBeanScope.backing_ViewProduct.s2}"/>
                         <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
                                    disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b3"
                                    binding="#{backingBeanScope.backing_ViewProduct.b3}">
                             <af:resetActionListener/>
                         </af:button>
                     </af:gridCell>
-                    <af:gridCell id="gc4" binding="#{backingBeanScope.backing_ViewProduct.gc4}"/>
                 </af:gridRow>
             </af:panelGridLayout>
         </f:facet>

@@ -1,5 +1,6 @@
 package model.UVO;
 
+import oracle.jbo.Row;
 import oracle.jbo.RowSet;
 import oracle.jbo.RowSetIterator;
 import oracle.jbo.server.EntityImpl;
@@ -11,6 +12,8 @@ import oracle.jbo.server.ViewRowImpl;
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
 public class AssignTeamUVORowImpl extends ViewRowImpl {
+
+
     public static final int ENTITY_SALESTEAMSEO = 0;
 
     /**
@@ -20,8 +23,10 @@ public class AssignTeamUVORowImpl extends ViewRowImpl {
         ManagerId,
         TeamId,
         TeamName,
-        ManagerUVO1;
+        ManagerUVO1,
+        UsersUVO1;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -43,10 +48,13 @@ public class AssignTeamUVORowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
+
     public static final int MANAGERID = AttributesEnum.ManagerId.index();
     public static final int TEAMID = AttributesEnum.TeamId.index();
     public static final int TEAMNAME = AttributesEnum.TeamName.index();
     public static final int MANAGERUVO1 = AttributesEnum.ManagerUVO1.index();
+    public static final int USERSUVO1 = AttributesEnum.UsersUVO1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -114,11 +122,77 @@ public class AssignTeamUVORowImpl extends ViewRowImpl {
     public RowSet getManagerUVO1() {
         return (RowSet) getAttributeInternal(MANAGERUVO1);
     }
-    
-    public void setManagerId(Long value) {
-     
-        setAttributeInternal(MANAGERID, value);
-        
+
+    /**
+     * Gets the view accessor <code>RowSet</code> UsersUVO1.
+     */
+    public RowSet getUsersUVO1() {
+        return (RowSet) getAttributeInternal(USERSUVO1);
     }
+
+    public void setManagerId(Long value) {
+        
+        if(getManagerId()==null)
+        {
+        setAttributeInternal(MANAGERID, value);
+        RowSet rowSet=getUsersUVO1();
+        Row row=null;;
+        int flag=0;
+            
+        while(rowSet.hasNext())
+            {
+                row=rowSet.next(); 
+                System.out.println(value+" "+row.getAttribute("UserId"));
+                if(Integer.parseInt(row.getAttribute("UserId").toString())==value.intValue())
+                {
+                    System.out.println("WHATSAAAAAAAAAAPBROOOOOOOOOOOO");
+                    flag=1;
+                    break;
+                }
+                
+            }
+        if(flag==1){
+            row.setAttribute("SalesTeamId", getTeamId());
+            rowSet.executeQuery();
+            System.out.println("WHATSAAAAAAAAAAPBROOOOOOOOOOOO");
+            
+        }
+        }
+        else {
+            long oldvalue=getManagerId();
+            setAttributeInternal(MANAGERID, value);
+            RowSet rowSet1=getManagerUVO1();
+            Row row1=null;
+            int flag1=0;
+            while(rowSet1.hasNext()) {
+                row1=rowSet1.next();
+                if((Long)row1.getAttribute("UserId")==oldvalue)
+                {
+                    flag1=1;
+                    break;
+                }
+            }
+            row1.setAttribute("SalesTeamId", null);
+            RowSet rowSet=getUsersUVO1();
+            Row row=null;;
+            int flag=0;
+            while(rowSet.hasNext())
+                {
+                    row=rowSet.next();   
+                    if(row.getAttribute("UserId")==value)
+                    {
+                        flag=1;
+                        break;
+                    }
+                    
+                }
+            if(flag==1)
+                row.setAttribute("SalesTeamId", getTeamId());
+        }
+        
+        getDBTransaction().commit();
+    }
+        
+    
 }
 

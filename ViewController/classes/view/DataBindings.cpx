@@ -14,8 +14,6 @@
     <page path="/Products.jsf" usageId="view_ProductsPageDef"/>
     <page path="/Roles.jsf" usageId="view_RolesPageDef"/>
     <page path="/createrole.jsff" usageId="view_createrolePageDef"/>
-    <page path="/WEB-INF/flows/create-role-taskflow.xml#create-role-taskflow@CreateInsert"
-          usageId="view_create_role_taskflow_create_role_taskflow_CreateInsertPageDef"/>
     <page path="/viewrole.jsff" usageId="view_viewrolePageDef"/>
     <page path="/CreateCategory.jsff" usageId="view_CreateCategoryPageDef"/>
     <page path="/WEB-INF/flows/create-product-category-taskflow.xml#create-product-category-taskflow@CreateInsert"
@@ -37,6 +35,9 @@
     <page path="/WEB-INF/flows/create-salesteam-taskflow.xml#create-salesteam-taskflow@CreateInsert"
           usageId="view_create_salesteam_taskflow_create_salesteam_taskflow_CreateInsertPageDef"/>
     <page path="/assignManager.jsff" usageId="view_assignManagerPageDef"/>
+    <page path="/ViewUser.jsff" usageId="view_ViewUserPageDef"/>
+    <page path="/WEB-INF/flows/create-role-taskflow.xml#create-role-taskflow@CreateInsert"
+          usageId="view_create_role_taskflow_create_role_taskflow_CreateInsertPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_untitled2PageDef" path="view.pageDefs.untitled2PageDef"/>
@@ -46,8 +47,6 @@
     <page id="view_ProductsPageDef" path="view.pageDefs.ProductsPageDef"/>
     <page id="view_RolesPageDef" path="view.pageDefs.RolesPageDef"/>
     <page id="view_createrolePageDef" path="view.pageDefs.createrolePageDef"/>
-    <page id="view_create_role_taskflow_create_role_taskflow_CreateInsertPageDef"
-          path="flows.create_role_taskflow_create_role_taskflow_CreateInsertPageDef"/>
     <page id="view_viewrolePageDef" path="view.pageDefs.viewrolePageDef"/>
     <page id="view_CreateCategoryPageDef" path="view.pageDefs.CreateCategoryPageDef"/>
     <page id="view_create_product_category_taskflow_create_product_category_taskflow_CreateInsertPageDef"
@@ -69,6 +68,9 @@
     <page id="view_create_salesteam_taskflow_create_salesteam_taskflow_CreateInsertPageDef"
           path="flows.create_salesteam_taskflow_create_salesteam_taskflow_CreateInsertPageDef"/>
     <page id="view_assignManagerPageDef" path="view.pageDefs.assignManagerPageDef"/>
+    <page id="view_ViewUserPageDef" path="view.pageDefs.ViewUserPageDef"/>
+    <page id="view_create_role_taskflow_create_role_taskflow_CreateInsertPageDef"
+          path="flows.create_role_taskflow_create_role_taskflow_CreateInsertPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AdminAppModuleDataControl" Package="model.AM"

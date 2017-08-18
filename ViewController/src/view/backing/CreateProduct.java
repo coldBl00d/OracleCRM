@@ -4,6 +4,7 @@ import javax.faces.component.UISelectItems;
 
 import oracle.adf.view.rich.component.rich.input.RichInputText;
 import oracle.adf.view.rich.component.rich.input.RichSelectOneChoice;
+import oracle.adf.view.rich.component.rich.layout.RichDecorativeBox;
 import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
 
@@ -18,6 +19,7 @@ public class CreateProduct {
     private RichSelectOneChoice soc1;
     private UISelectItems si1;
     private RichButton b1;
+    private RichDecorativeBox db1;
 
     public void setPfl1(RichPanelFormLayout pfl1) {
         this.pfl1 = pfl1;
@@ -73,5 +75,14 @@ public class CreateProduct {
 
     public RichButton getB1() {
         return b1;
+    }
+
+
+    public void setDb1(RichDecorativeBox db1) {
+        this.db1 = db1;
+    }
+
+    public RichDecorativeBox getDb1() {
+        return db1;
     }
 }

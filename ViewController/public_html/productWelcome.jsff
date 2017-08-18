@@ -2,9 +2,7 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:panelGridLayout id="pgl1">
         <af:gridRow height="100%" id="gr1">
-            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
-                <af:outputText value="product welcome" id="ot1" binding="#{backingBeanScope.backing_productWelcome.ot1}"/>
-            </af:gridCell>
+            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1"/>
         </af:gridRow>
     </af:panelGridLayout>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_productWelcome-->

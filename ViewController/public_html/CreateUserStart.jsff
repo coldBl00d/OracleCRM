@@ -22,7 +22,7 @@
                                       columns="#{bindings.UPassword.hints.displayWidth}"
                                       maximumLength="#{bindings.UPassword.hints.precision}"
                                       shortDesc="#{bindings.UPassword.hints.tooltip}" id="it2"
-                                      binding="#{backingBeanScope.backing_CreateUserStart.it2}">
+                                      binding="#{backingBeanScope.backing_CreateUserStart.it2}" secret="true">
                             <f:validator binding="#{bindings.UPassword.validator}"/>
                         </af:inputText>
                         <af:inputText value="#{bindings.UserRefId.inputValue}" label="#{bindings.UserRefId.hints.label}"

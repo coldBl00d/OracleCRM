@@ -40,17 +40,7 @@
             </af:gridCell>
         </af:gridRow>
         <af:gridRow id="gr2" binding="#{backingBeanScope.backing_assignManager.gr2}">
-            <af:gridCell id="gc2" binding="#{backingBeanScope.backing_assignManager.gc2}">
-                <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
-                           disabled="#{!bindings.Commit.enabled}" id="b1"
-                           binding="#{backingBeanScope.backing_assignManager.b1}"/>
-                <af:spacer width="10" height="10" id="s1" binding="#{backingBeanScope.backing_assignManager.s1}"/>
-                <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
-                           disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b2"
-                           binding="#{backingBeanScope.backing_assignManager.b2}">
-                    <af:resetActionListener/>
-                </af:button>
-            </af:gridCell>
+            <af:gridCell id="gc2" binding="#{backingBeanScope.backing_assignManager.gc2}"/>
         </af:gridRow>
     </af:panelGridLayout>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_assignManager-->
